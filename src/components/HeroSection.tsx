@@ -7,9 +7,9 @@ const HeroSection = () => {
       {/* Background with a subtle professional feel */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2000&auto=format&fit=crop" 
-          alt="Building Management" 
-          className="w-full h-full object-cover opacity-20"
+          src="/6d8dae8a-e5ca-4736-b48b-4902bce36e74.png" 
+          alt="하나주택종합관리 현장" 
+          className="w-full h-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
       </div>
@@ -19,31 +19,30 @@ const HeroSection = () => {
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-1.5 rounded-full mb-8"
+            className="inline-flex items-center space-x-3 bg-white border border-slate-200 px-5 py-2 rounded-lg mb-10 shadow-sm"
           >
-            <span className="text-primary text-sm font-bold">EST. 2010</span>
-            <span className="w-1 h-1 rounded-full bg-primary/30"></span>
-            <span className="text-primary/70 text-sm font-medium">용산구 주택종합관리 전문</span>
+            <span className="text-primary font-bold text-base border-r border-slate-200 pr-3">SINCE 2010</span>
+            <span className="text-slate-600 text-base font-medium">15년 전통 용산 주택관리의 기준</span>
           </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.2] tracking-tight mb-8"
+            className="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.15] tracking-tight mb-10"
           >
-            건물의 가치를 높이는 <br />
-            <span className="text-primary">신뢰와 정직의 관리</span>
+            대대로 이어가는 <br />
+            <span className="text-primary">건물의 가치와 신뢰</span>
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed"
+            className="text-xl md:text-2xl text-slate-700 mb-12 max-w-2xl leading-relaxed font-medium"
           >
-            하나주택종합관리는 15년 이상의 현장 경험을 바탕으로 <br />
-            용산 지역 건물주의 자산 가치 극대화와 임차인 만족을 책임집니다.
+            하나주택종합관리는 2010년부터 용산 한 자리를 지켜왔습니다. <br />
+            오랜 시간 쌓아온 정직함으로 당신의 자산을 책임 있게 관리합니다.
           </motion.p>
           
           <motion.div 

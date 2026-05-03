@@ -12,7 +12,7 @@ const FAQSection = () => {
     },
     {
       q: '청소만 의뢰할 수 있나요?',
-      a: '네, 가능합니다. 계단, 복도, 현관, 주차장, 분리수거 공간 등 필요한 범위를 협의하여 맞춤형 청소 관리 서비스를 제공합니다.',
+      a: '네, 가능합나다. 계단, 복도, 현관, 주차장, 분리수거 공간 등 필요한 범위를 협의하여 맞춤형 청소 관리 서비스를 제공합니다.',
     },
     {
       q: '정기 관리도 가능한가요?',
@@ -25,31 +25,26 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gray-50">
-      <div className="container mx-auto px-6 max-w-4xl">
-        <div className="text-center mb-24">
-          <motion.h2 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="text-5xl md:text-7xl font-black text-primary tracking-tighter mb-8 uppercase"
-          >
-            Inquiry FAQ
-          </motion.h2>
-          <p className="text-gray-400 text-lg font-light">가장 많이 궁금해하시는 질문들을 정리했습니다.</p>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6 max-w-3xl">
+        <div className="text-center mb-16">
+          <h2 className="text-primary font-bold mb-4">도움말</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">자주 묻는 질문</h3>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm transition-all hover:shadow-xl hover:shadow-primary/5">
+            <div key={idx} className="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden transition-all">
               <button
-                className="w-full px-10 py-10 flex justify-between items-center text-left"
+                className="w-full px-8 py-6 flex justify-between items-center text-left"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
               >
-                <span className="font-black text-primary text-xl md:text-2xl tracking-tight leading-snug">
-                   <span className="text-secondary mr-4">Q.</span>{faq.q}
+                <span className="font-bold text-slate-900 text-lg md:text-xl tracking-tight leading-snug flex items-start">
+                   <span className="text-primary mr-3 shrink-0">Q.</span>
+                   <span>{faq.q}</span>
                 </span>
-                <div className={`p-4 rounded-full transition-colors ${openIndex === idx ? 'bg-primary text-white' : 'bg-gray-50 text-primary'}`}>
-                  {openIndex === idx ? <Minus size={20} /> : <Plus size={20} />}
+                <div className={`shrink-0 ml-4 transition-transform duration-300 ${openIndex === idx ? 'rotate-180' : ''}`}>
+                  <Plus size={20} className="text-slate-400" />
                 </div>
               </button>
               
@@ -61,8 +56,9 @@ const FAQSection = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
-                    <div className="px-10 pb-10 pt-0 text-gray-500 text-lg font-medium leading-relaxed border-t border-gray-50/50 mt-4 py-8">
-                       <span className="text-secondary font-black mr-4">A.</span>{faq.a}
+                    <div className="px-8 pb-8 pt-0 text-slate-500 text-[15px] leading-relaxed flex items-start">
+                       <span className="text-primary font-bold mr-3 shrink-0">A.</span>
+                       <span>{faq.a}</span>
                     </div>
                   </motion.div>
                 )}

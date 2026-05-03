@@ -2,20 +2,26 @@
 
 @theme {
   --color-primary: #002B5B;
-  --color-primary-light: #2B4865;
+  --color-primary-light: #003d82;
   --color-primary-dark: #001C30;
-  --color-secondary: #004D99; /* Adjusted to a more professional blue */
+  --color-secondary: #004D99;
   --color-secondary-light: #E6F0FF;
-  --font-sans: "Noto Sans KR", sans-serif;
+  --font-sans: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 @layer base {
+  html {
+    font-size: 16px; /* Standardizing base for rem calculation */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
-    @apply font-sans text-slate-800 bg-white leading-relaxed;
+    @apply font-sans text-slate-900 bg-white leading-[1.75] tracking-tight;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-primary tracking-tight;
+    @apply font-bold text-slate-900 tracking-tight leading-[1.3];
   }
 }
 

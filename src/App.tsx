@@ -17,6 +17,34 @@ import MapSection from './components/MapSection';
 import Footer from './components/Footer';
 import MobileCTA from './components/MobileCTA';
 
+import GreetingsSection from './components/GreetingsSection';
+import ScrollToTop from './components/ScrollToTop';
+import HistorySection from './components/HistorySection';
+import StatsSection from './components/StatsSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import PartnershipSection from './components/PartnershipSection';
+
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import MobileCTA from './components/MobileCTA';
+import ScrollToTop from './components/ScrollToTop';
+
+import Home from './pages/Home';
+import Company from './pages/Company';
+import ServicesPage from './pages/Services';
+import Portfolio from './pages/Portfolio';
+import Inquiry from './pages/Inquiry';
+
+const ScrollToTopOnNavigate = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
 function App() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -26,34 +54,31 @@ function App() {
   });
 
   return (
-    <div className="min-h-screen bg-white selection:bg-secondary/20 selection:text-secondary antialiased">
-      {/* Signature Scroll Progress Bar */}
-      <motion.div 
-        className="fixed top-0 left-0 right-0 h-1.5 bg-secondary origin-left z-[200]" 
-        style={{ scaleX }} 
-      />
+    <Router>
+      <ScrollToTopOnNavigate />
+      <div className="min-h-screen bg-white selection:bg-primary/20 selection:text-primary antialiased">
+        <motion.div 
+          className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-[200]" 
+          style={{ scaleX }} 
+        />
 
-      <Header />
-      <main>
-        <HeroSection />
-        <TrustSection />
-        <AboutSection />
-        <CheckBeforeChoosingSection />
-        <SuccessPortfolio />
-        <ServicesSection />
-        <ManagementScopeSection />
-        <TargetSection />
-        <LocalTrustSection />
-        <ChecklistSection />
-        <ProcessSection />
-        <ContactSection />
-        <FAQSection />
-        <MapSection />
-      </main>
-      <Footer />
-      <MobileCTA />
-    </div>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/company" element={<Company />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/inquiry" element={<Inquiry />} />
+          </Routes>
+        </main>
+        <Footer />
+        <MobileCTA />
+        <ScrollToTop />
+      </div>
+    </Router>
   );
+}
 }
 
 export default App;

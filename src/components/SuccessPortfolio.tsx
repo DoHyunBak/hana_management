@@ -7,28 +7,28 @@ const SuccessPortfolio = () => {
       title: '용산구 원효로 다세대 빌라',
       type: '주거 시설',
       management: '정기 청소 + 시설 관리',
-      image: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1200&auto=format&fit=crop',
+      image: '/2acdc01b-428f-454f-8ca1-8f3016f647d1.png',
       span: 'md:col-span-2'
     },
     {
       title: '한강로2가 근린생활시설',
       type: '상업 시설',
       management: '종합 건물 관리',
-      image: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=800&auto=format&fit=crop',
+      image: '/4bdae3a1-17be-4f7a-815d-2461fadefea9.png',
       span: 'md:col-span-1'
     },
     {
       title: '용산구 이촌동 소형 빌딩',
       type: '업무 시설',
       management: '유지 보수 전담',
-      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop',
+      image: '/6ab07a3d-e3e6-4f9c-b824-23d4795438bc.png',
       span: 'md:col-span-1'
     },
     {
       title: '한남동 고급 주택 단지',
       type: '주거 시설',
       management: '프리미엄 컨시어지 관리',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
+      image: '/9ea66c7c-0c21-4e68-bba6-83de8418033e.png',
       span: 'md:col-span-2'
     }
   ];
