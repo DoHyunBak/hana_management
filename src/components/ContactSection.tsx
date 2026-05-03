@@ -6,7 +6,6 @@ import emailjs from '@emailjs/browser';
 const ContactSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,7 +22,6 @@ const ContactSection = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       
-      setIsSuccess(true);
       formRef.current.reset();
       alert('상담 신청이 완료되었습니다. 곧 연락드리겠습니다.');
     } catch (error) {

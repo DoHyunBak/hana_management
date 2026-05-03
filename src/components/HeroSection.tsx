@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
