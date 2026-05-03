@@ -76,16 +76,16 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex items-center space-x-4">
                <div className="w-8 h-[1px] bg-secondary/30"></div>
-               <p className="text-[11px] text-slate-500 tracking-[0.2em] uppercase">
+               <p className="text-[11px] text-slate-500 tracking-[0.2em] uppercase leading-none">
                  © {new Date().getFullYear()} Hana Housing Management.
                </p>
             </div>
-            <div className="flex space-x-8">
-              <a href="#" className="text-[11px] text-slate-500 hover:text-secondary transition-colors tracking-widest uppercase">Privacy Policy</a>
-              <a href="#" className="text-[11px] text-slate-500 hover:text-secondary transition-colors tracking-widest uppercase">Terms of Service</a>
+            <div className="flex items-center space-x-8">
+              <a href="#" className="text-[11px] text-slate-500 hover:text-secondary transition-colors tracking-widest uppercase leading-none">Privacy Policy</a>
+              <a href="#" className="text-[11px] text-slate-500 hover:text-secondary transition-colors tracking-widest uppercase leading-none">Terms of Service</a>
             </div>
           </div>
-          <p className="text-[11px] text-slate-600 tracking-[0.2em] uppercase hidden md:block">
+          <p className="text-[11px] text-slate-600 tracking-[0.2em] uppercase hidden md:block leading-none">
             Established 2010
           </p>
         </div>

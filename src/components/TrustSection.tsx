@@ -26,9 +26,9 @@ const TrustSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between mb-24 gap-16">
           <div className="lg:w-1/2">
             <h2 className="text-secondary font-serif text-2xl mb-6">Pillars of Trust</h2>
-            <h3 className="text-4xl md:text-6xl text-slate-950 font-black tracking-tighter leading-tight mb-8 text-balance">
+            <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight tracking-tight mb-8">
               시간이 증명하고 <br />
-              <span className="text-slate-500 font-medium">결과가 말하는 신뢰</span>
+              <span className="text-slate-500 font-light">결과가 말하는 신뢰</span>
             </h3>
             <p className="text-slate-500 text-xl leading-relaxed font-light max-w-xl">
               트렌드는 변하지만 본질은 변하지 않습니다. 하나주택종합관리는 겉모습보다 내실을 다지며 묵묵히 자산의 가치를 지켜왔습니다.

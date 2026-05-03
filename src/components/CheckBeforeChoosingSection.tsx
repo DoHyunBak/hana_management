@@ -37,7 +37,7 @@ const CheckBeforeChoosingSection = () => {
             <h2 className="text-secondary font-serif text-2xl mb-6">Expert Checklist</h2>
             <h3 className="text-4xl md:text-6xl text-white font-serif leading-tight tracking-tight">
               관리 업체 선정 전, <br />
-              <span className="text-slate-400 font-light">꼭 확인해야 할 4가지</span>
+              <span className="text-slate-400 font-normal">꼭 확인해야 할 4가지</span>
             </h3>
           </div>
           <p className="text-slate-300 text-xl max-w-sm font-light leading-relaxed break-keep">

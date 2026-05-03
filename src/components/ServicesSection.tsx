@@ -37,7 +37,7 @@ const ServicesSection = () => {
           <h2 className="text-secondary font-serif text-2xl mb-6">Our Expertise</h2>
           <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight mb-8">
             자산의 품격을 높이는 <br />
-            전문 관리 솔루션
+            <span className="text-slate-500 font-light">전문 관리 솔루션</span>
           </h3>
           <div className="h-[2px] w-16 bg-primary mb-8"></div>
           <p className="text-slate-500 max-w-2xl text-xl leading-relaxed font-light break-keep">

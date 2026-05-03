@@ -40,9 +40,9 @@ const ContactSection = () => {
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="lg:w-5/12">
             <h2 className="text-secondary font-serif text-2xl mb-8">Consultation</h2>
-            <h3 className="text-4xl md:text-7xl leading-[1.1] mb-12 tracking-tight">
-              <span className="text-white font-light">당신의 자산을 위한</span> <br />
-              <span className="text-slate-400 font-bold">가장 정직한 대화</span>
+            <h3 className="text-4xl md:text-6xl text-white font-serif leading-tight tracking-tight mb-12">
+              당신의 자산을 위한 <br />
+              <span className="text-slate-400 font-normal">가장 정직한 대화</span>
             </h3>
             
             <p className="text-xl text-slate-300 leading-relaxed mb-16 font-light break-keep">

@@ -15,7 +15,8 @@ const ProcessSection = () => {
           <div className="max-w-2xl">
             <h2 className="text-secondary font-serif text-2xl mb-6">Execution</h2>
             <h3 className="text-4xl md:text-6xl text-white font-serif leading-tight tracking-tight">
-              투명하고 체계적인 <br />하나만의 관리 프로세스
+              투명하고 체계적인 <br />
+              <span className="text-slate-400 font-normal">하나만의 관리 프로세스</span>
             </h3>
           </div>
           <p className="text-slate-300 text-xl max-w-sm font-light leading-relaxed break-keep">

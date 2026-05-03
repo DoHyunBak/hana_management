@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
         <h2 className="text-secondary font-serif text-2xl mb-6">Client Success</h2>
         <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight tracking-tight">
           건물주가 증명하는 <br />
-          <span className="text-slate-500 font-light">하나주택의 정직한 관리</span>
+          <span className="text-slate-500 font-normal">하나주택의 정직한 관리</span>
         </h3>
       </div>
 

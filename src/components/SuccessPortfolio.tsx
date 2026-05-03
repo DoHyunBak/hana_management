@@ -51,7 +51,7 @@ const SuccessPortfolio = () => {
             <h2 className="text-secondary font-serif text-2xl mb-6">Portfolio</h2>
             <h3 className="text-4xl md:text-6xl text-white font-serif leading-tight tracking-tight">
               신뢰로 쌓아온 <br />
-              <span className="text-slate-400 font-medium">용산의 관리 파트너</span>
+              <span className="text-slate-400 font-normal">용산의 관리 파트너</span>
             </h3>
           </div>
           <div className="max-w-sm">
