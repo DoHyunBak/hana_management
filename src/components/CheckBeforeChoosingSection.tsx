@@ -30,42 +30,39 @@ const CheckBeforeChoosingSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <section className="py-32 bg-primary-dark text-white relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-10">
+        <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-10">
           <div className="max-w-2xl">
-            <h2 className="text-blue-400 font-bold mb-4 flex items-center space-x-2">
-              <span className="w-8 h-[2px] bg-blue-400"></span>
-              <span>체크리스트</span>
-            </h2>
-            <h3 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+            <h2 className="text-secondary font-serif text-2xl mb-6">Expert Checklist</h2>
+            <h3 className="text-4xl md:text-6xl text-white font-serif leading-tight tracking-tight">
               관리 업체 선정 전, <br />
-              꼭 확인해야 할 4가지
+              <span className="text-slate-400 font-light">꼭 확인해야 할 4가지</span>
             </h3>
           </div>
-          <p className="text-slate-400 text-lg max-w-sm">
-            건물 관리는 단순히 비용의 문제가 아닙니다. <br />
+          <p className="text-slate-300 text-xl max-w-sm font-light leading-relaxed break-keep">
+            건물 관리는 단순한 비용의 문제가 아닙니다. <br />
             당신의 소중한 자산을 지킬 수 있는 <br />
-            검증된 파트너인지 먼저 확인하십시오.
+            검증된 파트너인지 확인하십시오.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {checklists.map((item, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="p-8 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-between group hover:bg-white transition-all duration-300 cursor-default"
+              className="p-10 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-between group hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-default"
             >
               <div>
-                 <div className="text-blue-400 group-hover:text-primary transition-colors mb-6">
+                 <div className="text-secondary group-hover:text-primary transition-colors mb-8 bg-white/5 p-4 rounded-xl inline-block group-hover:bg-primary/5">
                    {item.icon}
                  </div>
-                 <h4 className="text-xs font-bold text-blue-300/50 group-hover:text-primary/30 mb-2">{item.title}</h4>
-                 <h5 className="text-xl font-bold text-white group-hover:text-slate-900 transition-colors mb-4">{item.subtitle}</h5>
-                 <p className="text-slate-400 group-hover:text-slate-500 text-sm leading-relaxed">
+                 <h4 className="text-sm font-bold text-secondary tracking-[0.2em] uppercase mb-3 opacity-60 group-hover:opacity-100 transition-opacity">{item.title}</h4>
+                 <h5 className="text-2xl font-bold text-white group-hover:text-slate-900 transition-colors mb-6 break-keep">{item.subtitle}</h5>
+                 <p className="text-slate-400 group-hover:text-slate-600 text-lg leading-relaxed font-light break-keep transition-colors">
                    {item.desc}
                  </p>
               </div>

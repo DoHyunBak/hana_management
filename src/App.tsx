@@ -9,7 +9,6 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Company from './pages/Company';
 import ServicesPage from './pages/Services';
-import Portfolio from './pages/Portfolio';
 import Inquiry from './pages/Inquiry';
 
 const ScrollToTopOnNavigate = () => {
@@ -43,7 +42,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/company" element={<Company />} />
             <Route path="/services" element={<ServicesPage />} />
-            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/inquiry" element={<Inquiry />} />
           </Routes>
         </main>

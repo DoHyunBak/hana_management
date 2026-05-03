@@ -44,8 +44,7 @@ const Header = () => {
         <div className="hidden lg:flex flex-1 justify-end items-center lg:space-x-8 xl:space-x-12 ml-8">
           {[
             { label: '회사소개', href: '/company' },
-            { label: '서비스안내', href: '/services' },
-            { label: '관리실적', href: '/portfolio' }
+            { label: '서비스안내', href: '/services' }
           ].map((item) => (
             <Link 
               key={item.label}

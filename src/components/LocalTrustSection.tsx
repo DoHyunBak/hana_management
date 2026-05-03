@@ -19,34 +19,34 @@ const LocalTrustSection = () => {
               현장에 답이 있다는 믿음으로, 용산 건물주의 든든한 파트너가 되어 드립니다.
             </p>
 
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <div className="p-3 bg-primary/5 rounded-lg text-primary">
-                  <MapPin size={24} />
+            <div className="space-y-6">
+              <div className="flex items-start space-x-6 bg-slate-50 p-8 rounded-2xl border border-slate-100 group hover:bg-white hover:shadow-xl transition-all duration-300">
+                <div className="p-4 bg-white rounded-xl text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
+                  <MapPin size={28} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-1">용산 전역 밀착 관리</h4>
-                  <p className="text-slate-500 text-sm">원효로, 이촌동, 한강로, 이태원 등 용산구 전 지역 신속 출동</p>
+                  <h4 className="font-bold text-slate-900 text-xl mb-2">용산 전역 밀착 관리</h4>
+                  <p className="text-slate-600 text-lg leading-relaxed font-light">원효로, 이촌동, 한강로, 이태원 등 용산구 전 지역 신속 출동</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <div className="p-3 bg-primary/5 rounded-lg text-primary">
-                  <Compass size={24} />
+              <div className="flex items-start space-x-6 bg-slate-50 p-8 rounded-2xl border border-slate-100 group hover:bg-white hover:shadow-xl transition-all duration-300">
+                <div className="p-4 bg-white rounded-xl text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
+                  <Compass size={28} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-1">지역 특화 네트워크</h4>
-                  <p className="text-slate-500 text-sm">지역 내 주요 설비업체와 긴밀한 협력으로 문제 즉각 대응</p>
+                  <h4 className="font-bold text-slate-900 text-xl mb-2">지역 특화 네트워크</h4>
+                  <p className="text-slate-600 text-lg leading-relaxed font-light">지역 내 주요 설비업체와 긴밀한 협력으로 문제 즉각 대응</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <div className="p-3 bg-primary/5 rounded-lg text-primary">
-                  <Building size={24} />
+              <div className="flex items-start space-x-6 bg-slate-50 p-8 rounded-2xl border border-slate-100 group hover:bg-white hover:shadow-xl transition-all duration-300">
+                <div className="p-4 bg-white rounded-xl text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
+                  <Building size={28} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-1">건물 맞춤형 관리</h4>
-                  <p className="text-slate-500 text-sm">용산 지역 특유의 다양한 건물 형태에 최적화된 관리 역량</p>
+                  <h4 className="font-bold text-slate-900 text-xl mb-2">건물 맞춤형 관리</h4>
+                  <p className="text-slate-600 text-lg leading-relaxed font-light">용산 지역 특유의 다양한 건물 형태에 최적화된 관리 역량</p>
                 </div>
               </div>
             </div>

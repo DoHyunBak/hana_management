@@ -1,91 +1,120 @@
 import { motion } from 'framer-motion';
-import { Calendar, ArrowRight } from 'lucide-react';
+import { Wrench, Scale, Leaf, ShieldAlert, Thermometer, Droplets } from 'lucide-react';
 
 const FieldNewsSection = () => {
-  const news = [
+  const coverages = [
     {
-      date: 'MAY 02, 2026',
-      category: 'MAINTENANCE',
-      title: '이촌동 다세대 빌라 봄맞이 대청소 및 방역 실시',
-      desc: '해당 건물의 전 구역 물청소 및 하절기 대비 특별 방역 작업을 완료하였습니다. 15년 관리 매뉴얼에 따른 철저한 시공이 진행되었습니다.',
-      img: '/2acdc01b-428f-454f-8ca1-8f3016f647d1.png'
+      category: 'FACILITY',
+      title: '기계 및 전기 설비 정밀 유지보수',
+      desc: '승강기, 펌프, 수배전반 등 건물의 핵심 심장부를 전문가가 상시 점검합니다.',
+      icon: <Wrench size={18} className="text-secondary" />
     },
     {
-      date: 'APR 28, 2026',
-      category: 'EMERGENCY',
-      title: '원효로 상가건물 노후 배관 긴급 교체 작업',
-      desc: '야간에 발생한 누수 민원을 접수하여 1시간 내 현장 도착 및 수선을 완료했습니다. 신속한 대응으로 입주민 피해를 최소화하였습니다.',
-      img: '/6ab07a3d-e3e6-4f9c-b824-23d4795438bc.png'
+      category: 'LEGAL & TAX',
+      title: '법무 및 세무 행정 통합 지원',
+      desc: '복잡한 임대차 보호법 대응부터 관리비 정산, 부가세 신고까지 전문가가 돕습니다.',
+      icon: <Scale size={18} className="text-blue-500" />
     },
     {
-      date: 'APR 20, 2026',
-      category: 'NEW CONTRACT',
-      title: '한강로 3가 소형 오피스텔 종합 관리 개시',
-      desc: '용산구 한강로의 새로운 랜드마크 소형 오피스텔과 종합 관리 계약을 체결하였습니다. 하나주택만의 차별화된 프리미엄 서비스를 시작합니다.',
-      img: '/9ea66c7c-0c21-4e68-bba6-83de8418033e.png'
+      category: 'LANDSCAPE',
+      title: '건물 외관 및 조경 환경 디자인',
+      desc: '계절별 수목 관리와 화단 정비를 통해 건물의 첫인상과 가치를 높입니다.',
+      icon: <Leaf size={18} className="text-green-500" />
+    },
+    {
+      category: 'SAFETY',
+      title: '24시간 무인 경비 및 보안 관제',
+      desc: '첨단 보안 시스템과 연동하여 외부인 출입 통제 및 사고 예방을 책임집니다.',
+      icon: <ShieldAlert size={18} className="text-red-500" />
+    },
+    {
+      category: 'ENERGY',
+      title: '에너지 효율 최적화 솔루션',
+      desc: '공용 전기 및 수도료 절감을 위한 설비 세팅과 에너지 진단을 주기적으로 실시합니다.',
+      icon: <Thermometer size={18} className="text-amber-500" />
+    },
+    {
+      category: 'HYGIENE',
+      title: '수질 관리 및 특수 살균 방역',
+      desc: '저수조 청소와 법정 방역은 물론, 유행성 질환 예방을 위한 공간 살균을 진행합니다.',
+      icon: <Droplets size={18} className="text-cyan-500" />
     }
   ];
 
+  const scrollingCoverages = [...coverages, ...coverages];
+
   return (
-    <section className="py-32 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+    <section className="py-32 bg-white overflow-hidden">
+      <div className="container mx-auto px-6 mb-20">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-secondary font-serif text-2xl mb-6">Field Reports</h2>
+            <h2 className="text-secondary font-serif text-2xl mb-6">Service Scope</h2>
             <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight">
-              신뢰를 쌓아가는 <br />
-              <span className="text-slate-500">현장의 기록들</span>
+              단순 관리를 넘어 <br />
+              <span className="text-slate-500 font-light">자산 가치를 설계합니다</span>
             </h3>
           </div>
-          <button className="flex items-center space-x-3 text-primary font-bold tracking-widest text-sm hover:text-secondary transition-colors group">
-            <span>VIEW ALL REPORTS</span>
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          <div className="max-w-xs text-right hidden md:block">
+            <p className="text-slate-400 text-sm leading-relaxed font-light">
+              하나주택종합관리는 건물 운영에 필요한 모든 영역을 전문가의 시선으로 통합 관리합니다.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {news.map((item, idx) => (
-            <motion.div
+      <div className="relative">
+        <motion.div 
+          className="flex space-x-8"
+          animate={{
+            x: [0, -2100], 
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 45,
+              ease: "linear",
+            },
+          }}
+        >
+          {scrollingCoverages.map((item, idx) => (
+            <div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="flex flex-col group cursor-pointer"
+              className="w-[350px] md:w-[450px] shrink-0 bg-slate-50 p-10 rounded-2xl border border-slate-100 flex flex-col justify-between hover:bg-white hover:shadow-2xl transition-all duration-500 group"
             >
-              <div className="relative aspect-[4/3] overflow-hidden mb-8">
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-                />
-                <div className="absolute top-0 right-0 p-4">
-                  <span className="bg-white/90 backdrop-blur-sm text-primary text-[10px] font-bold px-3 py-1 tracking-widest uppercase">
-                    {item.category}
-                  </span>
+              <div>
+                <div className="flex items-center space-x-3 mb-8">
+                  <div className="p-3 bg-white rounded-lg shadow-sm group-hover:bg-primary-dark group-hover:text-white transition-colors">
+                    {item.icon}
+                  </div>
+                  <span className="text-[10px] font-black tracking-[0.2em] text-slate-400 uppercase">{item.category}</span>
                 </div>
+                
+                <h4 className="text-2xl font-bold text-slate-900 mb-6 leading-snug break-keep group-hover:text-primary transition-colors">
+                  {item.title}
+                </h4>
+                
+                <p className="text-slate-500 text-lg leading-relaxed font-light break-keep">
+                  {item.desc}
+                </p>
               </div>
               
-              <div className="flex items-center space-x-3 text-secondary text-[11px] font-bold tracking-widest mb-4">
-                <Calendar size={14} />
-                <span>{item.date}</span>
+              <div className="mt-12 flex items-center space-x-2 text-[10px] font-bold text-secondary tracking-widest uppercase">
+                <span className="w-8 h-[1px] bg-secondary/30"></span>
+                <span>Hana Premium Standard</span>
               </div>
-              
-              <h4 className="text-2xl font-serif text-slate-950 mb-4 group-hover:text-primary transition-colors leading-snug">
-                {item.title}
-              </h4>
-              
-              <p className="text-slate-500 text-[15px] leading-relaxed line-clamp-2 font-light mb-6">
-                {item.desc}
-              </p>
-              
-              <div className="mt-auto pt-6 border-t border-slate-100 flex justify-between items-center group/more">
-                <span className="text-xs font-bold text-slate-400 group-hover/more:text-primary transition-colors tracking-widest">READ MORE</span>
-                <ArrowRight size={14} className="text-slate-300 group-hover/more:text-primary transition-colors" />
-              </div>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
+        
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+      </div>
+
+      <div className="mt-20 container mx-auto px-6 text-center border-t border-slate-100 pt-10">
+        <p className="text-slate-300 text-[10px] font-bold tracking-[0.4em] uppercase">
+          Comprehensive Property Management Solutions in Yongsan
+        </p>
       </div>
     </section>
   );
