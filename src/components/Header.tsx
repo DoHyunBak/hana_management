@@ -68,11 +68,20 @@ const Header = () => {
               <Phone size={14} className="text-secondary" />
               <span className="font-bold text-xs">070-4227-5394</span>
             </a>
-            <Link to="/inquiry" className={`lg:px-4 xl:px-8 py-3 text-xs font-bold transition-all whitespace-nowrap ${
-              showSolidHeader 
-                ? 'bg-primary text-white hover:bg-primary-light' 
-                : 'bg-secondary text-white hover:bg-secondary-light shadow-xl'
-            }`}>
+            <Link 
+              to={isHomePage ? '#' : '/inquiry'}
+              onClick={(e) => {
+                if (isHomePage) {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className={`lg:px-4 xl:px-8 py-3 text-xs font-bold transition-all whitespace-nowrap ${
+                showSolidHeader 
+                  ? 'bg-primary text-white hover:bg-primary-light' 
+                  : 'bg-secondary text-white hover:bg-secondary-light shadow-xl'
+              }`}
+            >
               상담문의
             </Link>
           </div>

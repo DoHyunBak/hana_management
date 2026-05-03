@@ -52,7 +52,10 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="flex"
           >
-            <button className="bg-secondary text-white px-12 py-6 text-xl font-bold hover:bg-secondary-light transition-all flex items-center justify-center space-x-4 group border border-secondary/50 shadow-2xl">
+            <button 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-secondary text-white px-12 py-6 text-xl font-bold hover:bg-secondary-light transition-all flex items-center justify-center space-x-4 group border border-secondary/50 shadow-2xl"
+            >
               <span>무료 현장 진단 및 상담 신청</span>
               <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
             </button>

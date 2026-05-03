@@ -73,16 +73,21 @@ const Footer = () => {
         </div>
         
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center space-x-4">
-             <div className="w-8 h-[1px] bg-secondary/30"></div>
-             <p className="text-[11px] text-slate-500 tracking-[0.2em] uppercase">
-               © {new Date().getFullYear()} Hana Housing Management. Established 2010.
-             </p>
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="flex items-center space-x-4">
+               <div className="w-8 h-[1px] bg-secondary/30"></div>
+               <p className="text-[11px] text-slate-500 tracking-[0.2em] uppercase">
+                 © {new Date().getFullYear()} Hana Housing Management.
+               </p>
+            </div>
+            <div className="flex space-x-8">
+              <a href="#" className="text-[11px] text-slate-500 hover:text-secondary transition-colors tracking-widest uppercase">Privacy Policy</a>
+              <a href="#" className="text-[11px] text-slate-500 hover:text-secondary transition-colors tracking-widest uppercase">Terms of Service</a>
+            </div>
           </div>
-          <div className="flex space-x-10">
-            <a href="#" className="text-[11px] text-slate-500 hover:text-secondary transition-colors tracking-widest uppercase">Privacy Policy</a>
-            <a href="#" className="text-[11px] text-slate-500 hover:text-secondary transition-colors tracking-widest uppercase">Terms of Service</a>
-          </div>
+          <p className="text-[11px] text-slate-600 tracking-[0.2em] uppercase hidden md:block">
+            Established 2010
+          </p>
         </div>
       </div>
       

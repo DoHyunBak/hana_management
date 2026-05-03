@@ -85,7 +85,10 @@ const ServicesSection = () => {
                 모든 건물은 다릅니다. 귀하의 건물에 가장 최적화된 맞춤형 관리 플랜을 무료로 진단해 드립니다.
               </p>
             </div>
-            <button className="relative z-10 bg-secondary text-white px-8 py-4 font-bold hover:bg-secondary-light transition-all flex items-center justify-between group/btn shadow-xl border border-secondary/50">
+            <button 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="relative z-10 bg-secondary text-white px-8 py-4 font-bold hover:bg-secondary-light transition-all flex items-center justify-between group/btn shadow-xl border border-secondary/50"
+            >
               <span>무료 상담 시작하기</span>
               <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
             </button>
