@@ -50,28 +50,28 @@ const ManagementScopeSection = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {scopes.map((scope, idx) => (
             <motion.div
               key={idx}
               whileHover={{ y: -5 }}
-              className="p-8 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between h-full group hover:bg-white hover:shadow-xl transition-all duration-300"
+              className="p-10 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between h-full group hover:bg-white hover:shadow-2xl transition-all duration-300"
             >
               <div>
-                <div className="flex justify-between items-start mb-8">
-                   <div className="text-primary">
+                <div className="flex justify-between items-start mb-10">
+                   <div className="text-secondary p-3 bg-white rounded-lg shadow-sm">
                      {scope.icon}
                    </div>
-                   <span className="text-xs font-bold text-slate-300">0{idx + 1}</span>
+                   <span className="text-2xl font-serif italic text-slate-200">0{idx + 1}</span>
                 </div>
-                <h4 className="text-lg font-bold text-slate-900 mb-3">{scope.category}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed mb-8">{scope.desc}</p>
+                <h4 className="text-2xl font-bold text-slate-900 mb-5 group-hover:text-secondary transition-colors">{scope.category}</h4>
+                <p className="text-slate-600 text-lg leading-relaxed mb-10 font-light break-keep">{scope.desc}</p>
               </div>
               
-              <ul className="space-y-3 pt-6 border-t border-slate-200">
+              <ul className="space-y-4 pt-8 border-t border-slate-200">
                 {scope.items.map((item, i) => (
-                  <li key={i} className="flex items-center space-x-2 text-sm font-medium text-slate-700">
-                    <CheckCircle2 size={14} className="text-primary opacity-60" />
+                  <li key={i} className="flex items-center space-x-3 text-lg font-medium text-slate-800">
+                    <CheckCircle2 size={18} className="text-secondary shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}

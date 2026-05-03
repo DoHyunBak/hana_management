@@ -12,7 +12,7 @@ const GreetingsSection = () => {
               className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white"
             >
               <img 
-                src="/640ac55d-ed35-482d-acc5-12fae210a968.png" 
+                src="/ceo.png" 
                 alt="Representative Park Chang-seop" 
                 className="w-full h-full object-cover aspect-[4/5]"
               />
