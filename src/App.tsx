@@ -1,29 +1,4 @@
 import { motion, useScroll, useSpring } from 'framer-motion';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import TrustSection from './components/TrustSection';
-import AboutSection from './components/AboutSection';
-import CheckBeforeChoosingSection from './components/CheckBeforeChoosingSection';
-import SuccessPortfolio from './components/SuccessPortfolio';
-import ServicesSection from './components/ServicesSection';
-import ManagementScopeSection from './components/ManagementScopeSection';
-import TargetSection from './components/TargetSection';
-import LocalTrustSection from './components/LocalTrustSection';
-import ChecklistSection from './components/ChecklistSection';
-import ProcessSection from './components/ProcessSection';
-import ContactSection from './components/ContactSection';
-import FAQSection from './components/FAQSection';
-import MapSection from './components/MapSection';
-import Footer from './components/Footer';
-import MobileCTA from './components/MobileCTA';
-
-import GreetingsSection from './components/GreetingsSection';
-import ScrollToTop from './components/ScrollToTop';
-import HistorySection from './components/HistorySection';
-import StatsSection from './components/StatsSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import PartnershipSection from './components/PartnershipSection';
-
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
@@ -78,7 +53,6 @@ function App() {
       </div>
     </Router>
   );
-}
 }
 
 export default App;

@@ -1,8 +1,7 @@
-import HeroSection from './components/HeroSection';
-import StatsSection from './components/StatsSection';
-import TrustSection from './components/TrustSection';
-import ServicesSection from './components/ServicesSection';
-import PartnershipSection from '../components/PartnershipSection';
+import HeroSection from '../components/HeroSection';
+import StatsSection from '../components/StatsSection';
+import TrustSection from '../components/TrustSection';
+import ServicesSection from '../components/ServicesSection';
 import FieldNewsSection from '../components/FieldNewsSection';
 import ContactSection from '../components/ContactSection';
 
@@ -13,7 +12,6 @@ const Home = () => {
       <StatsSection />
       <TrustSection />
       <ServicesSection />
-      <PartnershipSection />
       <FieldNewsSection />
       <ContactSection />
     </>

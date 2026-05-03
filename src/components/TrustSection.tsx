@@ -1,68 +1,99 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Activity, TrendingUp, Users } from 'lucide-react';
+import { ShieldCheck, History, Award, CheckCircle2 } from 'lucide-react';
 
-const BentoTrustSection = () => {
+const TrustSection = () => {
+  const values = [
+    {
+      icon: <History size={28} className="text-secondary" />,
+      title: '15년의 축적된 데이터',
+      description: '2010년부터 용산구 일대의 수많은 주택과 건물을 관리하며 쌓아온 실전 노하우는 그 누구도 흉내 낼 수 없는 우리의 자산입니다.'
+    },
+    {
+      icon: <Award size={28} className="text-secondary" />,
+      title: '검증된 관리 전문성',
+      description: '단순한 청소를 넘어 시설 유지보수, 법무/세무 지원까지 건물주의 입장에서 가장 필요한 핵심 서비스를 체계적으로 제공합니다.'
+    },
+    {
+      icon: <ShieldCheck size={28} className="text-secondary" />,
+      title: '책임 있는 자산 관리',
+      description: '내 집을 관리하는 마음으로 사소한 결함도 놓치지 않습니다. 투명한 리포트와 정직한 정산으로 무너질 수 없는 신뢰를 쌓습니다.'
+    }
+  ];
+
   return (
-    <section className="py-24 bg-white">
+    <section className="py-32 bg-white border-y border-slate-100 overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="mb-16">
-          <h2 className="text-primary font-bold mb-4 flex items-center space-x-2">
-            <span className="w-8 h-[2px] bg-primary"></span>
-            <span>핵심 가치</span>
-          </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">우리가 신뢰를 증명하는 방식</h3>
+        <div className="flex flex-col lg:flex-row items-center justify-between mb-24 gap-16">
+          <div className="lg:w-1/2">
+            <h2 className="text-secondary font-serif italic text-2xl mb-6">Pillars of Trust</h2>
+            <h3 className="text-4xl md:text-6xl text-slate-950 font-black tracking-tighter leading-tight mb-8 text-balance">
+              시간이 증명하고 <br />
+              <span className="text-slate-500 font-medium">결과가 말하는 신뢰</span>
+            </h3>
+            <p className="text-slate-500 text-xl leading-relaxed font-light max-w-xl">
+              트렌드는 변하지만 본질은 변하지 않습니다. 하나주택종합관리는 겉모습보다 내실을 다지며 묵묵히 자산의 가치를 지켜왔습니다.
+            </p>
+          </div>
+          <div className="lg:w-1/2 relative">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/6ab07a3d-e3e6-4f9c-b824-23d4795438bc.png" 
+                alt="전문적인 관리 현장" 
+                className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            {/* Decorative background element */}
+            <div className="absolute -right-8 -bottom-8 w-64 h-64 bg-slate-50 rounded-full -z-0"></div>
+            <div className="absolute -left-4 -top-4 w-32 h-32 bg-secondary/10 rounded-full -z-0"></div>
+            
+            <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md p-6 border border-slate-100 shadow-xl max-w-xs">
+              <p className="text-primary font-serif italic text-lg mb-1">Since 2010</p>
+              <p className="text-slate-600 text-xs tracking-widest uppercase font-bold">Yongsan Property Management</p>
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[500px]">
-          {/* Big Card */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="md:col-span-2 md:row-span-2 rounded-2xl p-10 flex flex-col justify-between bg-primary text-white shadow-xl"
-          >
-            <ShieldCheck size={48} className="text-blue-300 mb-8" />
-            <div>
-              <h4 className="text-3xl font-bold mb-4 leading-tight">2010년부터 시작된 <br />용산 관리의 역사</h4>
-              <p className="text-blue-100/80 text-lg leading-relaxed">
-                단순히 오래된 것이 아니라, 수만 건의 현장 데이터를 통해 <br />
-                어떤 문제도 즉각 해결하는 시스템을 갖췄습니다.
+        <div className="grid md:grid-cols-3 gap-12">
+          {values.map((value, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="group"
+            >
+              <div className="mb-8 flex items-center justify-between">
+                <div className="p-4 bg-slate-50 border border-slate-100 rounded-sm group-hover:bg-primary transition-colors duration-500 group-hover:border-primary">
+                  <div className="group-hover:text-white transition-colors duration-500">
+                    {value.icon}
+                  </div>
+                </div>
+                <span className="text-slate-200 font-serif italic text-5xl">0{idx + 1}</span>
+              </div>
+              <h4 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-primary transition-colors tracking-tight">
+                {value.title}
+              </h4>
+              <p className="text-slate-500 leading-relaxed text-[16px] font-light break-keep">
+                {value.description}
               </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
+        </div>
 
-          {/* Medium Cards */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="md:col-span-2 md:row-span-1 rounded-2xl p-8 bg-slate-50 border border-slate-100 flex items-center space-x-6"
-          >
-            <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
-               <Users size={32} className="text-primary" />
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-slate-900">전문 베테랑 팀</h4>
-              <p className="text-slate-500">현장을 직접 발로 뛰는 숙련된 인력</p>
-            </div>
-          </motion.div>
-
-          {/* Small Cards */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="rounded-2xl p-8 bg-blue-50 border border-blue-100 text-primary flex flex-col justify-between"
-          >
-            <TrendingUp size={32} />
-            <h4 className="text-xl font-bold">자산 가치 상승</h4>
-          </motion.div>
-
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="rounded-2xl p-8 bg-slate-900 text-white flex flex-col justify-between shadow-lg"
-          >
-            <Activity size={32} className="text-blue-400" />
-            <h4 className="text-xl font-bold">24시간 상시 관리</h4>
-          </motion.div>
+        {/* Established Badge / Seal */}
+        <div className="mt-24 pt-16 border-t border-slate-100 flex flex-col items-center">
+          <div className="flex items-center space-x-3 text-primary mb-6">
+            <CheckCircle2 size={20} className="text-secondary" />
+            <span className="font-bold tracking-[0.2em] text-sm uppercase">Yongsan's Standard Since 2010</span>
+          </div>
+          <p className="text-slate-400 text-sm text-center max-w-xl italic">
+            "우리는 건물의 현재뿐만 아니라 미래까지 생각합니다. 15년 전 처음 가졌던 그 정직한 마음 그대로, 당신의 곁을 지키겠습니다."
+          </p>
         </div>
       </div>
     </section>
   );
 };
 
-export default BentoTrustSection;
+export default TrustSection;

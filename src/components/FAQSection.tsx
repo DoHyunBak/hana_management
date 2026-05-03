@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { Plus } from 'lucide-react';
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

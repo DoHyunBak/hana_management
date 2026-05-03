@@ -1,4 +1,4 @@
-import { ClipboardCheck, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const ChecklistSection = () => {
   const checklistGroups = [

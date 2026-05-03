@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { MapPin, Navigation, ExternalLink } from 'lucide-react';
 
 const MapSection = () => {

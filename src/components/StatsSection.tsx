@@ -1,69 +1,73 @@
 import { motion } from 'framer-motion';
-import { Award, Building2, Users2, HeartHandshake } from 'lucide-react';
 
 const StatsSection = () => {
   const stats = [
     {
-      icon: <Award className="text-blue-500" size={32} />,
-      number: '15+',
-      label: '관리 숙련도',
-      suffix: '년의 시간',
-      desc: '2010년부터 한결같이 용산을 지켜온 현장 관리 노하우'
+      number: '15',
+      label: 'Years of Heritage',
+      suffix: 'th',
+      desc: '2010년부터 용산 한 자리를 지켜온 역사'
     },
     {
-      icon: <Building2 className="text-blue-500" size={32} />,
-      number: '500+',
-      label: '누적 관리',
-      suffix: '개소 돌파',
-      desc: '빌라, 상가, 오피스텔 등 다양한 건물 관리 실적'
+      number: '500',
+      label: 'Managed Assets',
+      suffix: '+',
+      desc: '수많은 건물주가 선택한 검증된 관리력'
     },
     {
-      icon: <Users2 className="text-blue-500" size={32} />,
-      number: '1,200+',
-      label: '입주민 소통',
-      suffix: '세대 관리',
-      desc: '실시간 민원 대응 시스템으로 입주민 만족도 극대화'
+      number: '1,200',
+      label: 'Resident Trust',
+      suffix: '+',
+      desc: '세대별 맞춤 대응으로 쌓아온 두터운 신뢰'
     },
     {
-      icon: <HeartHandshake className="text-blue-500" size={32} />,
-      number: '98%',
-      label: '재계약률',
-      suffix: '압도적 신뢰',
-      desc: '정직한 관리로 증명하는 건물주분들의 높은 신뢰도'
+      number: '98',
+      label: 'Retention Rate',
+      suffix: '%',
+      desc: '정직한 실력으로 증명하는 압도적 재계약률'
     }
   ];
 
   return (
-    <section className="py-24 bg-white border-b border-slate-100">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <section className="py-24 bg-primary text-white overflow-hidden relative">
+      {/* Subtle decorative pattern */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20">
           {stats.map((stat, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
-              className="text-center md:text-left space-y-4 group"
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.8 }}
+              className="relative"
             >
-              <div className="flex justify-center md:justify-start">
-                <div className="p-4 bg-slate-50 rounded-2xl group-hover:bg-primary/5 transition-colors">
-                  {stat.icon}
-                </div>
-              </div>
-              <div>
-                <div className="flex items-baseline justify-center md:justify-start space-x-2">
-                  <span className="text-4xl md:text-5xl font-black text-primary tracking-tighter">
+              <div className="flex flex-col items-center lg:items-start">
+                <div className="flex items-baseline mb-4">
+                  <span className="text-5xl md:text-7xl font-serif text-secondary tracking-tighter">
                     {stat.number}
                   </span>
-                  <span className="text-lg font-bold text-slate-400">
+                  <span className="text-xl md:text-2xl font-serif text-secondary/60 ml-1">
                     {stat.suffix}
                   </span>
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mt-2 mb-3">{stat.label}</h4>
-                <p className="text-slate-500 text-base leading-relaxed break-keep">
+                <div className="h-[2px] w-8 bg-secondary/30 mb-6 hidden lg:block"></div>
+                <h4 className="text-sm md:text-base font-bold text-white/50 uppercase tracking-[0.2em] mb-4">
+                  {stat.label}
+                </h4>
+                <p className="text-slate-400 text-sm md:text-base leading-relaxed text-center lg:text-left break-keep font-light">
                   {stat.desc}
                 </p>
               </div>
+              
+              {/* Vertical divider for desktop */}
+              {idx < stats.length - 1 && (
+                <div className="absolute right-[-40px] top-1/2 -translate-y-1/2 w-[1px] h-20 bg-white/10 hidden lg:block"></div>
+              )}
             </motion.div>
           ))}
         </div>
