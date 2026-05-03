@@ -25,7 +25,7 @@ const TrustSection = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between mb-24 gap-16">
           <div className="lg:w-1/2">
-            <h2 className="text-secondary font-serif italic text-2xl mb-6">Pillars of Trust</h2>
+            <h2 className="text-secondary font-serif text-2xl mb-6">Pillars of Trust</h2>
             <h3 className="text-4xl md:text-6xl text-slate-950 font-black tracking-tighter leading-tight mb-8 text-balance">
               시간이 증명하고 <br />
               <span className="text-slate-500 font-medium">결과가 말하는 신뢰</span>
@@ -47,7 +47,7 @@ const TrustSection = () => {
             <div className="absolute -left-4 -top-4 w-32 h-32 bg-secondary/10 rounded-full -z-0"></div>
             
             <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md p-6 border border-slate-100 shadow-xl max-w-xs">
-              <p className="text-primary font-serif italic text-lg mb-1">Since 2010</p>
+              <p className="text-primary font-serif text-lg mb-1">Since 2010</p>
               <p className="text-slate-600 text-xs tracking-widest uppercase font-bold">Yongsan Property Management</p>
             </div>
           </div>
@@ -69,7 +69,7 @@ const TrustSection = () => {
                     {value.icon}
                   </div>
                 </div>
-                <span className="text-slate-200 font-serif italic text-5xl">0{idx + 1}</span>
+                <span className="text-slate-200 font-serif text-5xl">0{idx + 1}</span>
               </div>
               <h4 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-primary transition-colors tracking-tight">
                 {value.title}
@@ -87,8 +87,8 @@ const TrustSection = () => {
             <CheckCircle2 size={20} className="text-secondary" />
             <span className="font-bold tracking-[0.2em] text-sm uppercase">Yongsan's Standard Since 2010</span>
           </div>
-          <p className="text-slate-400 text-sm text-center max-w-xl italic">
-            "우리는 건물의 현재뿐만 아니라 미래까지 생각합니다. 15년 전 처음 가졌던 그 정직한 마음 그대로, 당신의 곁을 지키겠습니다."
+          <p className="text-slate-400 text-sm text-center max-w-xl">
+            "우리는 건물의 현재뿐만 아니라 미래까지 생각합니다. 15년 전 처음 가졌던 그 휘지 않는 정직함 그대로, 당신의 곁을 지키겠습니다."
           </p>
         </div>
       </div>

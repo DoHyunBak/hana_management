@@ -40,7 +40,7 @@
 }
 
 .text-heritage {
-  @apply font-serif italic text-secondary tracking-wide;
+  @apply font-serif text-secondary tracking-wide;
 }
 
 .text-balance {

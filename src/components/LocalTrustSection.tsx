@@ -62,7 +62,7 @@ const LocalTrustSection = () => {
                    <h5 className="text-xl font-bold text-slate-900 mb-2">하나주택종합관리 본사</h5>
                    <p className="text-slate-500 mb-8 text-sm">서울특별시 용산구 한강대로38가길 17</p>
                    <a 
-                    href="https://map.naver.com" 
+                    href="https://map.naver.com/p/entry/place/18735433" 
                     target="_blank" 
                     className="inline-flex items-center space-x-2 bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-light transition-all shadow-lg"
                    >

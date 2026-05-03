@@ -34,7 +34,7 @@ const ServicesSection = () => {
     <section id="services" className="py-32 bg-slate-50 border-b border-slate-200">
       <div className="container mx-auto px-6">
         <div className="mb-24 flex flex-col items-center text-center">
-          <h2 className="text-secondary font-serif italic text-2xl mb-6">Our Expertise</h2>
+          <h2 className="text-secondary font-serif text-2xl mb-6">Our Expertise</h2>
           <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight mb-8">
             자산의 품격을 높이는 <br />
             전문 관리 솔루션

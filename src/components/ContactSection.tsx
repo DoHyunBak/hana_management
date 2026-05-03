@@ -3,17 +3,17 @@ import { ArrowRight, Phone, MapPin, ClipboardList } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-32 bg-slate-50 relative overflow-hidden">
+    <section id="contact" className="py-32 bg-primary-dark relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="lg:w-5/12">
-            <h2 className="text-secondary font-serif italic text-2xl mb-8">Consultation</h2>
-            <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight mb-10">
-              귀하의 자산을 위한 <br />
-              <span className="text-slate-500 font-light italic">가장 정직한 대화</span>
+            <h2 className="text-secondary font-serif text-2xl mb-8">Consultation</h2>
+            <h3 className="text-4xl md:text-7xl leading-[1.1] mb-12 tracking-tight">
+              <span className="text-white font-light">당신의 자산을 위한</span> <br />
+              <span className="text-slate-400 font-bold">가장 정직한 대화</span>
             </h3>
             
-            <p className="text-xl text-slate-500 leading-relaxed mb-16 font-light break-keep">
+            <p className="text-xl text-slate-300 leading-relaxed mb-16 font-light break-keep">
               건물 관리는 단순한 유지보수를 넘어선 신뢰의 계약입니다. <br />
               15년 용산 현장의 경험을 바탕으로, 귀하의 자산에 가장 <br />
               최적화된 관리 솔루션을 직접 제안해 드립니다.
@@ -21,22 +21,22 @@ const ContactSection = () => {
             
             <div className="space-y-12">
                <div className="flex items-start space-x-6">
-                  <div className="p-4 bg-primary text-white">
+                  <div className="p-4 bg-secondary text-white rounded-sm">
                     <Phone size={24} />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-2">Direct Inquiry</p>
-                    <p className="text-3xl font-serif text-primary">070-4227-5394</p>
+                    <p className="text-3xl font-serif text-white">070-4227-5394</p>
                   </div>
                </div>
                
                <div className="flex items-start space-x-6">
-                  <div className="p-4 bg-white border border-slate-200">
+                  <div className="p-4 bg-white/10 backdrop-blur-sm border border-white/10 rounded-sm">
                     <MapPin size={24} className="text-secondary" />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-slate-400 tracking-widest uppercase mb-2">Head Office</p>
-                    <p className="text-sm font-semibold text-slate-700 leading-relaxed max-w-[200px]">
+                    <p className="text-lg font-semibold text-white leading-relaxed max-w-[300px]">
                       서울특별시 용산구 한강대로38가길 17 (한강로2가)
                     </p>
                   </div>

@@ -31,7 +31,7 @@ const FieldNewsSection = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-secondary font-serif italic text-2xl mb-6">Field Reports</h2>
+            <h2 className="text-secondary font-serif text-2xl mb-6">Field Reports</h2>
             <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight">
               신뢰를 쌓아가는 <br />
               <span className="text-slate-500">현장의 기록들</span>

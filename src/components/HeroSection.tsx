@@ -22,17 +22,17 @@ const HeroSection = () => {
             className="flex items-center space-x-4 mb-8"
           >
             <div className="h-[1px] w-12 bg-secondary"></div>
-            <span className="text-secondary font-serif italic text-xl tracking-wide">Established 2010</span>
+            <span className="text-secondary font-serif text-xl tracking-wide">Established 2010</span>
           </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl md:text-8xl text-white leading-[1.2] md:leading-[1.1] mb-10 font-black tracking-tighter"
+            className="text-4xl md:text-8xl text-white leading-[1.2] md:leading-[1.1] mb-10 font-extrabold tracking-tighter font-serif"
           >
             <span className="block whitespace-nowrap">용산의 가치를 지키는</span>
-            <span className="text-heritage block whitespace-nowrap">정직한 주택관리의 표본</span>
+            <span className="text-secondary block whitespace-nowrap">정직한 주택관리의 표본</span>
           </motion.h1>
           
           <motion.p 
@@ -43,26 +43,19 @@ const HeroSection = () => {
           >
             하나주택종합관리는 지난 15년 동안 용산의 변화를 함께해 왔습니다. <br />
             유행을 따르기보다 본질에 집중하는 관리 철학으로 <br />
-            당신의 자산에 흔들리지 않는 신뢰를 더합니다.
+            휘지 않는 정직함과 흔들리지 않는 신뢰를 더합니다.
           </motion.p>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6"
+            className="flex"
           >
-            <button className="bg-secondary text-white px-10 py-5 text-lg font-bold hover:bg-secondary-light transition-all flex items-center justify-center space-x-3 group border border-secondary/50">
-              <span>무료 현장 진단 신청</span>
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <button className="bg-secondary text-white px-12 py-6 text-xl font-bold hover:bg-secondary-light transition-all flex items-center justify-center space-x-4 group border border-secondary/50 shadow-2xl">
+              <span>무료 현장 진단 및 상담 신청</span>
+              <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <a 
-              href="tel:070-4227-5394"
-              className="flex items-center justify-center space-x-4 text-white border border-white/20 px-10 py-5 hover:bg-white/10 transition-colors"
-            >
-              <Phone size={18} className="text-secondary" />
-              <span className="font-bold tracking-wider">070-4227-5394</span>
-            </a>
           </motion.div>
         </div>
       </div>

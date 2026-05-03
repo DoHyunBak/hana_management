@@ -61,7 +61,7 @@ const GreetingsSection = () => {
                     </div>
                   </div>
                   <div className="hidden md:block">
-                     <p className="text-slate-300 font-serif italic text-4xl">Hana Housing</p>
+                     <p className="text-slate-300 font-serif text-4xl">Hana Housing</p>
                   </div>
                 </div>
               </div>

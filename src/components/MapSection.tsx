@@ -34,7 +34,7 @@ const MapSection = () => {
             </div>
 
             <a 
-              href="https://map.naver.com"
+              href="https://map.naver.com/p/entry/place/18735433"
               target="_blank"
               className="inline-flex items-center space-x-2 bg-slate-900 text-white px-8 py-3.5 rounded-lg font-bold shadow-lg hover:bg-black transition-all"
             >

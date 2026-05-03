@@ -10,8 +10,8 @@ const Footer = () => {
             <h2 className="text-3xl font-serif font-bold mb-8 tracking-tight">하나주택종합관리</h2>
             <p className="text-slate-400 text-lg leading-relaxed max-w-md mb-12 font-light">
               용산의 가치를 지키고 건물의 품격을 완성하는 <br />
-              대한민국 주택관리의 정석이 되겠습니다. <br />
-              지난 15년의 신뢰를 바탕으로 내일의 가치를 세웁니다.
+              대한민국 주택관리의 표본이 되겠습니다. <br />
+              휘지 않는 정직함으로 내일의 가치를 세웁니다.
             </p>
             
             <div className="flex space-x-6">
@@ -86,8 +86,7 @@ const Footer = () => {
         </div>
       </div>
       
-      {/* Subtle decorative "SINCE 2010" text in background */}
-      <div className="absolute right-[-5%] bottom-[-5%] text-[15vw] font-serif font-black text-white/5 select-none pointer-events-none italic">
+      <div className="absolute right-[-5%] bottom-[-5%] text-[15vw] font-serif font-black text-white/5 select-none pointer-events-none uppercase tracking-tighter">
         2010
       </div>
     </footer>
