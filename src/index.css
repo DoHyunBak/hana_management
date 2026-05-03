@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #002B5B;
+  --color-primary-light: #2B4865;
+  --color-primary-dark: #001C30;
+  --color-secondary: #004D99; /* Adjusted to a more professional blue */
+  --color-secondary-light: #E6F0FF;
+  --font-sans: "Noto Sans KR", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-800 bg-white leading-relaxed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-primary tracking-tight;
+  }
+}
+
+/* Custom styles for smooth scrolling and transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite ease-in-out;
+}
