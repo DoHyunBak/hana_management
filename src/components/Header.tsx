@@ -19,7 +19,7 @@ const Header = () => {
   const showSolidHeader = isScrolled || !isHomePage;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-500 py-4 ${
+    <nav className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-500 py-3 ${
       showSolidHeader ? 'bg-bg-warm/95 backdrop-blur-md shadow-md border-b border-border-warm' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -27,7 +27,7 @@ const Header = () => {
           <img 
             src="/logo.png" 
             alt="하나주택종합관리" 
-            className={`h-12 md:h-16 lg:h-18 w-auto block transition-all duration-500 ${
+            className={`h-14 md:h-20 lg:h-24 w-auto block transition-all duration-500 ${
               !showSolidHeader ? 'brightness-0 invert' : ''
             }`}
           />
