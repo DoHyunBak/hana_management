@@ -81,16 +81,17 @@ const TrustSection = () => {
           ))}
         </div>
 
-        {/* Established Badge / Seal */}
-        <div className="mt-24 pt-16 border-t border-border-warm flex flex-col items-center">
-          <div className="flex items-center space-x-3 text-primary-dark mb-6">
-            <CheckCircle2 size={20} className="text-accent" />
-            <span className="font-bold tracking-[0.2em] text-sm uppercase">Yongsan's Standard Since 2010</span>
-          </div>
-          <p className="text-text-muted text-sm text-center max-w-xl italic break-keep">
-            "우리는 건물의 현재뿐만 아니라 미래까지 생각합니다. 15년 전 처음 가졌던 그 휘지 않는 정직함 그대로, 당신의 곁을 지키겠습니다."
-          </p>
+      </div>
+
+      {/* Established Badge / Seal — full-width navy block */}
+      <div className="mt-24 bg-primary-deep py-20 px-6 flex flex-col items-center">
+        <div className="flex items-center space-x-3 mb-8">
+          <CheckCircle2 size={18} className="text-secondary" />
+          <span className="font-serif tracking-[0.35em] text-xs uppercase text-secondary">Yongsan's Standard Since 2010</span>
         </div>
+        <p className="font-serif text-xl md:text-2xl lg:text-3xl text-white/90 text-center max-w-3xl italic leading-relaxed break-keep">
+          "우리는 건물의 현재뿐만 아니라 미래까지 생각합니다. 15년 전 처음 가졌던 그 휘지 않는 정직함 그대로, 당신의 곁을 지키겠습니다."
+        </p>
       </div>
     </section>
   );
