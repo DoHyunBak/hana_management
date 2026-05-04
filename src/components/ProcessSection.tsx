@@ -14,7 +14,7 @@ const ProcessSection = () => {
         <div className="mb-20 flex flex-col md:flex-row justify-between items-end gap-10">
           <div className="max-w-2xl">
             <h2 className="text-secondary font-serif text-2xl mb-6">Execution</h2>
-            <h3 className="text-4xl md:text-7xl text-white font-bold leading-[1.1] tracking-tighter">
+            <h3 className="text-4xl md:text-6xl text-white font-bold leading-tight tracking-tighter">
               투명하고 체계적인 <br />
               <span className="text-white/40 font-normal">하나만의 관리 프로세스</span>
             </h3>
