@@ -1,13 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #001C3D;
-  --color-primary-light: #002B5B;
-  --color-primary-dark: #000C1A;
-  --color-secondary: #8B735B;
-  --color-secondary-light: #A68D74;
-  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  --font-serif: "Playfair Display", serif;
+  /* Primary Navy - Core Trust */
+  --color-primary: #1F3F8F;
+  --color-primary-light: #E8EEF9;
+  --color-primary-dark: #10275F;
+  --color-primary-deep: #071936;
+
+  /* Heritage Brown - Secondary Accent */
+  --color-secondary: #8B5A44;
+  --color-secondary-light: #B08A72;
+  --color-secondary-soft: #F4EEE9;
+
+  /* Brand Red - HM Monogram Accent */
+  --color-accent: #E53935;
+  --color-accent-dark: #B92C2A;
+  --color-accent-light: #FDECEC;
+
+  /* Neutral Backgrounds */
+  --color-bg-warm: #F7F5F1;
+  --color-bg-logo: #E1E8E3;
+  --color-border-warm: #E5E0D8;
+
+  /* Text Colors - Darkened for better readability */
+  --color-text-main: #111827;
+  --color-text-sub: #374151;
+  --color-text-muted: #6B7280;
+
+  /* Typography */
+  --font-sans: "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-serif: "Cinzel", "Playfair Display", "Libre Baskerville", serif;
 }
 
 @layer base {
@@ -16,18 +38,19 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     word-break: keep-all; /* Better for Korean readability */
+    letter-spacing: -0.02em; /* Global tighter letter spacing */
   }
 
   body {
-    @apply font-sans text-slate-800 bg-white leading-[1.8] tracking-tight;
+    @apply font-sans text-text-main bg-white leading-[1.8] tracking-tight;
   }
   
   h1, h2, h3 {
-    @apply font-sans font-black text-slate-950 tracking-tighter leading-[1.2];
+    @apply font-sans font-extrabold text-primary-dark tracking-tighter leading-[1.2];
   }
 
   h4, h5, h6 {
-    @apply font-sans font-bold text-slate-900 tracking-tight leading-[1.4];
+    @apply font-sans font-bold text-primary tracking-tight leading-[1.4];
   }
 
   p {
@@ -40,7 +63,7 @@
 }
 
 .text-heritage {
-  @apply font-serif text-secondary tracking-wide;
+  @apply font-serif text-secondary tracking-widest uppercase;
 }
 
 .text-balance {

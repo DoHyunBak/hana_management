@@ -45,12 +45,12 @@ const TestimonialsSection = () => {
   const scrollingTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-32 bg-white overflow-hidden border-t border-slate-100">
+    <section className="py-32 bg-white overflow-hidden border-t border-border-warm">
       <div className="container mx-auto px-6 mb-20 text-center">
-        <h2 className="text-secondary font-serif text-2xl mb-6">Client Success</h2>
-        <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight tracking-tight">
+        <h2 className="text-secondary font-serif text-2xl mb-6 uppercase tracking-widest">Client Success</h2>
+        <h3 className="text-4xl md:text-6xl text-primary-dark font-extrabold leading-tight tracking-[-0.03em]">
           건물주가 증명하는 <br />
-          <span className="text-slate-500 font-normal">하나주택의 정직한 관리</span>
+          <span className="text-text-sub font-normal">하나주택의 정직한 관리</span>
         </h3>
       </div>
 
@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 40,
+              duration: 45,
               ease: "linear",
             },
           }}
@@ -73,31 +73,31 @@ const TestimonialsSection = () => {
           {scrollingTestimonials.map((item, idx) => (
             <div
               key={idx}
-              className="w-[350px] md:w-[450px] shrink-0 bg-slate-50 p-10 md:p-12 rounded-2xl border border-slate-100 flex flex-col justify-between relative group hover:bg-white hover:shadow-2xl transition-all duration-500"
+              className="w-[350px] md:w-[450px] shrink-0 bg-bg-warm p-10 md:p-12 rounded-sm border border-border-warm flex flex-col justify-between relative group hover:bg-white hover:shadow-2xl transition-all duration-500"
             >
-              <Quote className="text-primary/5 absolute top-8 right-8 group-hover:text-secondary/10 transition-colors" size={60} />
+              <Quote className="text-primary-dark/5 absolute top-8 right-8 group-hover:text-accent/10 transition-colors" size={60} />
               
               <div className="relative z-10">
-                <div className="flex space-x-1 mb-8 text-secondary">
+                <div className="flex space-x-1 mb-8 text-accent">
                   {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                 </div>
                 
-                <span className="inline-block px-4 py-1 bg-white text-secondary text-[10px] font-bold tracking-widest rounded-full mb-8 shadow-sm border border-slate-100">
+                <span className="inline-block px-4 py-1 bg-white text-secondary text-[10px] font-bold tracking-[0.15em] rounded-sm mb-8 shadow-sm border border-border-warm uppercase font-serif">
                   {item.tag}
                 </span>
                 
-                <p className="text-slate-800 leading-relaxed mb-10 text-xl font-medium break-keep">
+                <p className="text-primary-dark leading-relaxed mb-10 text-xl font-bold tracking-tight break-keep">
                   "{item.content}"
                 </p>
               </div>
 
-              <div className="pt-8 border-t border-slate-200/60 flex items-center justify-between">
+              <div className="pt-8 border-t border-border-warm flex items-center justify-between">
                 <div>
-                  <p className="text-slate-950 font-bold text-lg">{item.name}</p>
-                  <p className="text-slate-400 text-xs mt-1 uppercase tracking-widest">{item.location}</p>
+                  <p className="text-primary-dark font-bold text-lg">{item.name}</p>
+                  <p className="text-text-muted text-xs mt-1 uppercase tracking-widest font-serif">{item.location}</p>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-white border border-slate-100 flex items-center justify-center text-primary font-serif font-black shadow-sm">
-                  H
+                <div className="w-16 h-16 bg-white border border-border-warm flex items-center justify-center p-2 shadow-sm rounded-sm overflow-hidden">
+                  <img src="/logo.png" alt="HM" className="w-full h-auto object-contain opacity-50 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ const TestimonialsSection = () => {
       </div>
       
       <div className="mt-20 text-center">
-        <p className="text-slate-300 text-xs tracking-widest uppercase">
+        <p className="text-text-muted text-[10px] font-bold tracking-[0.4em] uppercase font-serif">
           Real property owner reviews. verified management success.
         </p>
       </div>

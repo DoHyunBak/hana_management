@@ -31,16 +31,16 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-32 bg-slate-50 border-b border-slate-200">
+    <section id="services" className="py-32 bg-bg-warm border-b border-border-warm">
       <div className="container mx-auto px-6">
         <div className="mb-24 flex flex-col items-center text-center">
           <h2 className="text-secondary font-serif text-2xl mb-6">Our Expertise</h2>
-          <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight mb-8">
+          <h3 className="text-4xl md:text-6xl text-primary-dark font-bold leading-tight mb-8">
             자산의 품격을 높이는 <br />
-            <span className="text-slate-500 font-light">전문 관리 솔루션</span>
+            <span className="text-text-sub font-light">전문 관리 솔루션</span>
           </h3>
-          <div className="h-[2px] w-16 bg-primary mb-8"></div>
-          <p className="text-slate-500 max-w-2xl text-xl leading-relaxed font-light break-keep">
+          <div className="h-[2px] w-16 bg-accent mb-8"></div>
+          <p className="text-text-main max-w-2xl text-xl leading-relaxed font-medium break-keep">
             하나주택종합관리는 단순한 용역이 아닌, 당신의 소중한 자산을 지키는 <br />
             신뢰할 수 있는 파트너로서 최상의 서비스를 제공합니다.
           </p>
@@ -62,14 +62,14 @@ const ServicesSection = () => {
                 </div>
                 <div className="absolute -left-4 -top-4 w-12 h-12 bg-primary/5 rounded-full -z-10 group-hover:bg-primary/10 transition-colors"></div>
               </div>
-              <h4 className="text-2xl font-serif text-slate-950 mb-6 group-hover:text-secondary transition-colors">
+              <h4 className="text-2xl font-bold text-primary-dark mb-6 group-hover:text-accent transition-colors">
                 {service.title}
               </h4>
-              <p className="text-slate-500 leading-relaxed text-[17px] font-light mb-8 flex-grow break-keep">
+              <p className="text-text-sub leading-relaxed text-[17px] font-medium mb-8 flex-grow break-keep">
                 {service.desc}
               </p>
-              <div className="pt-6 border-t border-slate-200">
-                <button className="flex items-center space-x-2 text-xs font-bold tracking-[0.2em] text-primary uppercase group-hover:text-secondary transition-colors">
+              <div className="pt-6 border-t border-border-warm">
+                <button className="flex items-center space-x-2 text-xs font-bold tracking-[0.2em] text-primary uppercase group-hover:text-accent transition-colors">
                   <span>Explore Service</span>
                   <ArrowRight size={14} />
                 </button>
@@ -78,16 +78,16 @@ const ServicesSection = () => {
           ))}
           
           {/* Action Card - Reimagined as a formal CTA card */}
-          <div className="lg:col-span-1 bg-primary p-12 flex flex-col justify-between border-t-4 border-secondary shadow-2xl relative overflow-hidden group">
+          <div className="lg:col-span-1 bg-primary-dark p-12 flex flex-col justify-between border-t-4 border-accent shadow-2xl relative overflow-hidden group">
             <div className="relative z-10">
-              <h4 className="text-3xl font-serif text-white mb-6 leading-tight">건물별 맞춤형 <br />관리 제안서 요청</h4>
+              <h4 className="text-3xl font-bold text-white mb-6 leading-tight">건물별 맞춤형 <br />관리 제안서 요청</h4>
               <p className="text-white/60 mb-10 text-[15px] leading-relaxed font-light">
                 모든 건물은 다릅니다. 귀하의 건물에 가장 최적화된 맞춤형 관리 플랜을 무료로 진단해 드립니다.
               </p>
             </div>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="relative z-10 bg-secondary text-white px-8 py-4 font-bold hover:bg-secondary-light transition-all flex items-center justify-between group/btn shadow-xl border border-secondary/50"
+              className="relative z-10 bg-accent text-white px-8 py-4 font-bold hover:bg-accent-dark transition-all flex items-center justify-between group/btn shadow-xl border border-accent/50"
             >
               <span>무료 상담 시작하기</span>
               <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />

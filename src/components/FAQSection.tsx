@@ -28,23 +28,23 @@ const FAQSection = () => {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="text-center mb-16">
-          <h2 className="text-primary font-bold mb-4">도움말</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">자주 묻는 질문</h3>
+          <h2 className="text-secondary font-serif font-bold mb-4 uppercase tracking-widest">Support</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-primary-dark tracking-tight">자주 묻는 질문</h3>
         </div>
 
         <div className="space-y-3">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="bg-slate-50 rounded-xl border border-slate-100 overflow-hidden transition-all">
+            <div key={idx} className="bg-bg-warm rounded-sm border border-border-warm overflow-hidden transition-all">
               <button
-                className="w-full px-8 py-6 flex justify-between items-center text-left"
+                className="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-white transition-colors group"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
               >
-                <span className="font-bold text-slate-900 text-lg md:text-xl tracking-tight leading-snug flex items-start">
-                   <span className="text-primary mr-3 shrink-0">Q.</span>
+                <span className="font-bold text-primary-dark text-lg md:text-xl tracking-tight leading-snug flex items-start">
+                   <span className="text-accent mr-3 shrink-0">Q.</span>
                    <span>{faq.q}</span>
                 </span>
                 <div className={`shrink-0 ml-4 transition-transform duration-300 ${openIndex === idx ? 'rotate-180' : ''}`}>
-                  <Plus size={20} className="text-slate-400" />
+                  <Plus size={20} className="text-text-muted group-hover:text-accent" />
                 </div>
               </button>
               
@@ -56,9 +56,9 @@ const FAQSection = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
-                    <div className="px-8 pb-8 pt-0 text-slate-500 text-[15px] leading-relaxed flex items-start">
-                       <span className="text-primary font-bold mr-3 shrink-0">A.</span>
-                       <span>{faq.a}</span>
+                    <div className="px-8 pb-8 pt-0 text-text-sub text-[15px] leading-relaxed flex items-start">
+                       <span className="text-accent font-bold mr-3 shrink-0">A.</span>
+                       <span className="break-keep">{faq.a}</span>
                     </div>
                   </motion.div>
                 )}

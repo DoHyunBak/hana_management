@@ -21,21 +21,21 @@ const TrustSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-white border-y border-slate-100 overflow-hidden">
+    <section className="py-32 bg-white border-y border-border-warm overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between mb-24 gap-16">
           <div className="lg:w-1/2">
             <h2 className="text-secondary font-serif text-2xl mb-6">Pillars of Trust</h2>
-            <h3 className="text-4xl md:text-6xl text-slate-950 font-serif leading-tight tracking-tight mb-8">
+            <h3 className="text-4xl md:text-6xl text-primary-dark font-bold leading-tight tracking-tight mb-8">
               시간이 증명하고 <br />
-              <span className="text-slate-500 font-light">결과가 말하는 신뢰</span>
+              <span className="text-text-sub font-light">결과가 말하는 신뢰</span>
             </h3>
-            <p className="text-slate-500 text-xl leading-relaxed font-light max-w-xl">
+            <p className="text-text-sub text-xl leading-relaxed font-light max-w-xl">
               트렌드는 변하지만 본질은 변하지 않습니다. 하나주택종합관리는 겉모습보다 내실을 다지며 묵묵히 자산의 가치를 지켜왔습니다.
             </p>
           </div>
           <div className="lg:w-1/2 relative">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative z-10 rounded-sm overflow-hidden shadow-2xl">
               <img 
                 src="/6ab07a3d-e3e6-4f9c-b824-23d4795438bc.png" 
                 alt="전문적인 관리 현장" 
@@ -43,12 +43,12 @@ const TrustSection = () => {
               />
             </div>
             {/* Decorative background element */}
-            <div className="absolute -right-8 -bottom-8 w-64 h-64 bg-slate-50 rounded-full -z-0"></div>
-            <div className="absolute -left-4 -top-4 w-32 h-32 bg-secondary/10 rounded-full -z-0"></div>
+            <div className="absolute -right-8 -bottom-8 w-64 h-64 bg-bg-warm rounded-full -z-0"></div>
+            <div className="absolute -left-4 -top-4 w-32 h-32 bg-accent/5 rounded-full -z-0"></div>
             
-            <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md p-6 border border-slate-100 shadow-xl max-w-xs">
-              <p className="text-primary font-serif text-lg mb-1">Since 2010</p>
-              <p className="text-slate-600 text-xs tracking-widest uppercase font-bold">Yongsan Property Management</p>
+            <div className="absolute bottom-6 left-6 z-20 bg-white/95 backdrop-blur-md p-6 border border-border-warm shadow-xl max-w-xs">
+              <p className="text-primary-dark font-serif text-lg mb-1">Since 2010</p>
+              <p className="text-text-sub text-xs tracking-widest uppercase font-bold">Yongsan Property Management</p>
             </div>
           </div>
         </div>
@@ -64,17 +64,17 @@ const TrustSection = () => {
               className="group"
             >
               <div className="mb-8 flex items-center justify-between">
-                <div className="p-4 bg-slate-50 border border-slate-100 rounded-sm group-hover:bg-primary transition-colors duration-500 group-hover:border-primary">
+                <div className="p-4 bg-bg-warm border border-border-warm rounded-sm group-hover:bg-primary-dark transition-colors duration-500 group-hover:border-primary-dark">
                   <div className="group-hover:text-white transition-colors duration-500">
                     {value.icon}
                   </div>
                 </div>
-                <span className="text-slate-200 font-serif text-5xl">0{idx + 1}</span>
+                <span className="text-bg-logo font-serif text-5xl">0{idx + 1}</span>
               </div>
-              <h4 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-primary transition-colors tracking-tight">
+              <h4 className="text-2xl font-bold text-primary-dark mb-6 group-hover:text-accent transition-colors tracking-tight">
                 {value.title}
               </h4>
-              <p className="text-slate-500 leading-relaxed text-[16px] font-light break-keep">
+              <p className="text-text-sub leading-relaxed text-[16px] font-light break-keep">
                 {value.description}
               </p>
             </motion.div>
@@ -82,12 +82,12 @@ const TrustSection = () => {
         </div>
 
         {/* Established Badge / Seal */}
-        <div className="mt-24 pt-16 border-t border-slate-100 flex flex-col items-center">
-          <div className="flex items-center space-x-3 text-primary mb-6">
-            <CheckCircle2 size={20} className="text-secondary" />
+        <div className="mt-24 pt-16 border-t border-border-warm flex flex-col items-center">
+          <div className="flex items-center space-x-3 text-primary-dark mb-6">
+            <CheckCircle2 size={20} className="text-accent" />
             <span className="font-bold tracking-[0.2em] text-sm uppercase">Yongsan's Standard Since 2010</span>
           </div>
-          <p className="text-slate-400 text-sm text-center max-w-xl">
+          <p className="text-text-muted text-sm text-center max-w-xl italic break-keep">
             "우리는 건물의 현재뿐만 아니라 미래까지 생각합니다. 15년 전 처음 가졌던 그 휘지 않는 정직함 그대로, 당신의 곁을 지키겠습니다."
           </p>
         </div>

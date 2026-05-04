@@ -19,26 +19,18 @@ const Header = () => {
   const showSolidHeader = isScrolled || !isHomePage;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
-      showSolidHeader ? 'bg-white shadow-md py-4' : 'bg-transparent py-8'
+    <nav className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-500 py-4 ${
+      showSolidHeader ? 'bg-bg-warm/95 backdrop-blur-md shadow-md border-b border-border-warm' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-4 md:gap-5 group shrink-0 relative z-10">
-          <div className={`shrink-0 w-11 h-11 md:w-13 md:h-13 flex items-center justify-center transition-all duration-500 ${showSolidHeader ? 'bg-primary' : 'bg-white shadow-lg shadow-black/10'}`}>
-             <span className={`${showSolidHeader ? 'text-white' : 'text-primary'} font-serif font-black text-2xl md:text-3xl`}>H</span>
-          </div>
-          <div className="flex flex-col justify-center min-w-0">
-            <span className={`text-lg lg:text-xl xl:text-2xl font-serif font-bold tracking-tight whitespace-nowrap transition-colors duration-500 ${
-              showSolidHeader ? 'text-slate-900' : 'text-white'
-            }`}>
-              하나주택종합관리
-            </span>
-            <span className={`text-[9px] lg:text-[10px] xl:text-[11px] tracking-[0.2em] uppercase mt-0.5 hidden sm:block transition-colors duration-500 ${
-              showSolidHeader ? 'text-slate-400' : 'text-white/60'
-            }`}>
-              Yongsan's Standard
-            </span>
-          </div>
+        <Link to="/" className="flex items-center group shrink-0 relative z-10">
+          <img 
+            src="/logo.png" 
+            alt="하나주택종합관리" 
+            className={`h-12 md:h-16 lg:h-18 w-auto block transition-all duration-500 ${
+              !showSolidHeader ? 'brightness-0 invert' : ''
+            }`}
+          />
         </Link>
         
         <div className="hidden lg:flex flex-1 justify-end items-center lg:space-x-8 xl:space-x-12 ml-8">
@@ -49,19 +41,22 @@ const Header = () => {
             <Link 
               key={item.label}
               to={item.href} 
-              className={`text-xs xl:text-sm font-bold tracking-widest transition-colors duration-500 hover:text-secondary whitespace-nowrap ${
-                showSolidHeader ? 'text-slate-700' : 'text-white/90'
+              className={`text-xs xl:text-sm font-bold tracking-widest transition-all duration-300 hover:text-accent whitespace-nowrap relative group/link ${
+                showSolidHeader ? 'text-primary-dark' : 'text-white'
               }`}
             >
               {item.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover/link:w-full"></span>
             </Link>
           ))}
           
-          <div className="flex items-center lg:space-x-4 xl:space-x-6 lg:pl-4 xl:pl-6 border-l border-white/10">
+          <div className={`flex items-center lg:space-x-4 xl:space-x-6 lg:pl-4 xl:pl-6 border-l ${
+            showSolidHeader ? 'border-primary-dark/10' : 'border-white/20'
+          }`}>
             <a 
               href="tel:070-4227-5394" 
               className={`flex items-center space-x-2 transition-colors duration-500 whitespace-nowrap ${
-                showSolidHeader ? 'text-primary' : 'text-white'
+                showSolidHeader ? 'text-primary-dark' : 'text-white'
               }`}
             >
               <Phone size={14} className="text-secondary" />
@@ -75,18 +70,16 @@ const Header = () => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className={`lg:px-4 xl:px-8 py-3 text-xs font-bold transition-all whitespace-nowrap ${
-                showSolidHeader 
-                  ? 'bg-primary text-white hover:bg-primary-light' 
-                  : 'bg-secondary text-white hover:bg-secondary-light shadow-xl'
+              className={`lg:px-4 xl:px-8 py-3 text-xs font-bold transition-all whitespace-nowrap uppercase tracking-widest shadow-md ${
+                showSolidHeader ? 'bg-primary-dark text-white hover:bg-primary-deep' : 'bg-white text-primary-dark hover:bg-primary-light'
               }`}
             >
-              상담문의
+              Consulting
             </Link>
           </div>
         </div>
 
-        <button className={`lg:hidden ${showSolidHeader ? 'text-primary' : 'text-white'}`}>
+        <button className={`lg:hidden ${showSolidHeader ? 'text-primary-dark' : 'text-white'}`}>
           <Search size={24} />
         </button>
       </div>

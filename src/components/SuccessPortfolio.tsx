@@ -44,22 +44,22 @@ const SuccessPortfolio = () => {
   const scrollingPortfolios = [...portfolios, ...portfolios];
 
   return (
-    <section id="portfolio" className="py-32 bg-slate-950 text-white overflow-hidden">
+    <section id="portfolio" className="py-32 bg-primary-deep text-white overflow-hidden">
       <div className="container mx-auto px-6 mb-24">
         <div className="flex flex-col md:flex-row justify-between items-end gap-12">
           <div className="max-w-2xl">
-            <h2 className="text-secondary font-serif text-2xl mb-6">Portfolio</h2>
-            <h3 className="text-4xl md:text-6xl text-white font-serif leading-tight tracking-tight">
+            <h2 className="text-secondary font-serif text-2xl mb-6 uppercase tracking-widest">Portfolio</h2>
+            <h3 className="text-4xl md:text-6xl text-white font-extrabold leading-tight tracking-[-0.03em]">
               신뢰로 쌓아온 <br />
-              <span className="text-slate-400 font-normal">용산의 관리 파트너</span>
+              <span className="text-white/40 font-normal">용산의 관리 파트너</span>
             </h3>
           </div>
           <div className="max-w-sm">
-            <div className="flex items-center space-x-3 text-secondary mb-6">
+            <div className="flex items-center space-x-3 text-accent mb-6">
               <ShieldCheck size={20} />
-              <span className="text-xs font-bold tracking-[0.3em] uppercase">Verified Management</span>
+              <span className="text-xs font-bold tracking-[0.2em] uppercase font-serif">Verified Management</span>
             </div>
-            <p className="text-slate-400 text-xl leading-relaxed font-light break-keep">
+            <p className="text-white/90 text-xl leading-relaxed font-medium tracking-tight break-keep shadow-sm">
               15년 동안 용산의 가치를 지켜온 <br />
               하나주택종합관리의 주요 실적입니다.
             </p>
@@ -77,7 +77,7 @@ const SuccessPortfolio = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 50,
+              duration: 55,
               ease: "linear",
             },
           }}
@@ -85,23 +85,23 @@ const SuccessPortfolio = () => {
           {scrollingPortfolios.map((item, idx) => (
             <div
               key={idx}
-              className="w-[350px] md:w-[500px] shrink-0 relative group rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer shadow-2xl"
+              className="w-[350px] md:w-[500px] shrink-0 relative group rounded-sm overflow-hidden aspect-[4/3] cursor-pointer shadow-2xl"
             >
               <img 
                 src={item.image} 
                 alt={item.title} 
                 className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-deep via-primary-deep/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
               
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <div className="flex justify-between items-end translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <div>
-                    <span className="text-secondary font-bold text-sm mb-3 block uppercase tracking-widest">{item.type}</span>
-                    <h4 className="text-2xl md:text-3xl font-serif text-white mb-3">{item.title}</h4>
-                    <p className="text-slate-300 text-sm font-light">{item.management}</p>
+                    <span className="text-accent font-bold text-sm mb-3 block uppercase tracking-widest">{item.type}</span>
+                    <h4 className="text-2xl md:text-3xl font-bold text-white mb-3">{item.title}</h4>
+                    <p className="text-white/60 text-sm font-light">{item.management}</p>
                   </div>
-                  <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                  <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
                     <ArrowUpRight size={24} className="text-white" />
                   </div>
                 </div>
@@ -111,18 +111,18 @@ const SuccessPortfolio = () => {
         </motion.div>
         
         {/* Shadow overlays for depth */}
-        <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-primary-deep to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-primary-deep to-transparent z-10 pointer-events-none"></div>
       </div>
 
       <div className="mt-24 container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between pt-12 border-t border-white/5 gap-8">
-          <p className="text-slate-500 text-[11px] tracking-[0.3em] uppercase">
+          <p className="text-white/20 text-[11px] tracking-[0.3em] uppercase">
             Over 500+ properties managed in Yongsan district since 2010.
           </p>
           <div className="flex space-x-8">
-            <div className="h-[1px] w-12 bg-secondary/30 mt-2"></div>
-            <span className="text-secondary font-serif italic text-lg">Hana Housing Standard</span>
+            <div className="h-[1px] w-12 bg-accent/30 mt-2"></div>
+            <span className="text-secondary font-serif italic text-lg uppercase tracking-widest">Hana Standard</span>
           </div>
         </div>
       </div>
