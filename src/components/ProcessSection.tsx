@@ -25,21 +25,30 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-10">
+        <div className="grid md:grid-cols-4 gap-12">
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="relative pt-12 border-t border-white/20 group"
+              className="relative pt-16 border-t border-white/10 group hover:border-white/30 transition-all duration-500"
             >
-              <span className="absolute top-0 left-0 -translate-y-1/2 text-sm font-bold tracking-[0.2em] text-secondary bg-primary-dark pr-6 uppercase">Step 0{idx + 1}</span>
-              <h4 className="text-2xl font-bold mb-6 group-hover:text-secondary transition-colors">{step.title}</h4>
-              <p className="text-slate-300 text-lg leading-relaxed mb-10 font-light break-keep">{step.desc}</p>
+              <div className="absolute top-0 left-0 -translate-y-1/2 flex items-center">
+                <span className="text-4xl font-serif italic text-secondary-light/30 mr-4 font-light">0{idx + 1}</span>
+                <span className="text-xs font-bold tracking-[0.3em] text-secondary-light bg-primary-dark pr-4 uppercase">Phase</span>
+              </div>
               
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary transition-all">
-                <div className="w-2 h-2 rounded-full bg-secondary group-hover:bg-white"></div>
+              <h4 className="text-3xl font-bold mb-8 text-white leading-tight tracking-tight group-hover:text-secondary-light transition-colors">
+                {step.title}
+              </h4>
+              
+              <p className="text-white/60 text-lg leading-relaxed mb-12 font-light break-keep group-hover:text-white/90 transition-colors">
+                {step.desc}
+              </p>
+              
+              <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500">
+                <div className="w-2 h-2 rounded-full bg-secondary-light group-hover:bg-primary-dark"></div>
               </div>
             </motion.div>
           ))}
