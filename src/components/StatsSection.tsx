@@ -29,10 +29,10 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-primary text-white overflow-hidden relative">
+    <section className="py-24 bg-primary-deep text-white overflow-hidden relative">
       {/* Subtle decorative pattern */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -48,18 +48,18 @@ const StatsSection = () => {
             >
               <div className="flex flex-col items-center lg:items-start">
                 <div className="flex items-baseline mb-4">
-                  <span className="text-5xl md:text-7xl font-serif text-secondary tracking-tighter">
+                  <span className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
                     {stat.number}
                   </span>
-                  <span className="text-xl md:text-2xl font-serif text-secondary/60 ml-1">
+                  <span className="text-xl md:text-2xl font-bold text-white/40 ml-1">
                     {stat.suffix}
                   </span>
                 </div>
-                <div className="h-[2px] w-8 bg-secondary/30 mb-6 hidden lg:block"></div>
-                <h4 className="text-sm md:text-base font-bold text-white/50 uppercase tracking-[0.2em] mb-4">
+                <div className="h-[2px] w-12 bg-accent mb-6 hidden lg:block"></div>
+                <h4 className="text-xs md:text-sm font-bold text-secondary-light uppercase tracking-[0.3em] mb-4 font-serif">
                   {stat.label}
                 </h4>
-                <p className="text-slate-400 text-sm md:text-base leading-relaxed text-center lg:text-left break-keep font-light">
+                <p className="text-white/60 text-base leading-relaxed text-center lg:text-left break-keep font-light">
                   {stat.desc}
                 </p>
               </div>
