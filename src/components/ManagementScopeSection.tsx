@@ -46,12 +46,12 @@ const ManagementScopeSection = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between items-start mb-24 gap-12">
           <div className="max-w-2xl">
-            <h2 className="text-secondary-light font-serif text-2xl mb-6 tracking-widest uppercase">Management Scope</h2>
-            <h3 className="text-4xl md:text-6xl text-primary-dark font-extrabold leading-tight tracking-tighter mb-8">
+            <h2 className="text-secondary font-serif text-2xl mb-6 tracking-widest uppercase">Management Scope</h2>
+            <h3 className="text-4xl md:text-6xl text-primary-dark font-bold leading-tight tracking-tight mb-8">
               정기 관리 <br />
-              <span className="text-text-sub/40 font-normal italic serif">체크리스트</span>
+              <span className="text-text-sub font-light">체크리스트</span>
             </h3>
-            <p className="text-text-sub text-xl font-medium leading-relaxed break-keep max-w-xl">
+            <p className="text-text-sub text-xl font-light leading-relaxed break-keep max-w-xl">
               매 방문 시마다 꼼꼼하게 확인하고 보고하는 <br />
               하나주택종합관리만의 전문 관리 항목입니다.
             </p>
@@ -80,15 +80,17 @@ const ManagementScopeSection = () => {
               className={`p-12 md:p-16 border-b md:border-b-0 md:border-r last:border-r-0 border-border-warm ${group.color} group hover:bg-primary-dark transition-colors duration-700`}
             >
               <div className="mb-12 flex justify-between items-start">
-                <div className="text-secondary group-hover:text-secondary-light transition-colors">
-                  {group.icon}
+                <div className="p-4 bg-bg-warm border border-border-warm rounded-sm group-hover:bg-primary-dark transition-colors duration-500 group-hover:border-primary-dark">
+                  <div className="text-secondary group-hover:text-white transition-colors duration-500">
+                    {group.icon}
+                  </div>
                 </div>
-                <span className="text-4xl font-serif italic text-border-warm group-hover:text-white/10 transition-colors leading-none">
+                <span className="text-5xl font-serif italic text-bg-logo group-hover:text-white/10 transition-colors leading-none">
                   {group.id}
                 </span>
               </div>
-              
-              <h4 className="text-3xl font-bold text-primary-dark mb-10 group-hover:text-white transition-colors">
+
+              <h4 className="text-2xl font-bold tracking-tight text-primary-dark mb-10 group-hover:text-white transition-colors">
                 {group.category}
               </h4>
               
