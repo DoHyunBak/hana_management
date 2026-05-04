@@ -80,7 +80,7 @@ const FieldNewsSection = () => {
           {scrollingCoverages.map((item, idx) => (
             <div
               key={idx}
-              className="w-[350px] md:w-[450px] shrink-0 bg-bg-warm p-10 rounded-sm border border-border-warm flex flex-col justify-between hover:bg-white hover:shadow-2xl transition-all duration-500 group"
+              className="w-[280px] sm:w-[350px] md:w-[420px] shrink-0 bg-bg-warm p-10 rounded-sm border border-border-warm flex flex-col justify-between hover:bg-white hover:shadow-2xl transition-all duration-500 group"
             >
               <div>
                 <div className="flex items-center space-x-3 mb-8">
@@ -107,8 +107,8 @@ const FieldNewsSection = () => {
           ))}
         </motion.div>
         
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
       </div>
 
       <div className="mt-20 container mx-auto px-6 text-center border-t border-border-warm pt-10">

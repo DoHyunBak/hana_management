@@ -47,14 +47,14 @@ const CheckBeforeChoosingSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {checklists.map((item, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="p-10 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-between group hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-default"
+              className="p-6 md:p-10 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-between group hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-default"
             >
               <div>
                  <div className="text-secondary group-hover:text-primary transition-colors mb-8 bg-white/5 p-4 rounded-xl inline-block group-hover:bg-primary/5">

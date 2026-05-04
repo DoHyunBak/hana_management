@@ -87,7 +87,7 @@ const ContactSection = () => {
               </div>
               
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-10">
-                <div className="grid md:grid-cols-2 gap-10">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-10">
                   <div className="relative group">
                     <label className="text-xs font-bold text-text-muted uppercase tracking-widest mb-4 block group-focus-within:text-primary-dark transition-colors">성함 또는 기관명</label>
                     <input 

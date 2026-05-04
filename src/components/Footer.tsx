@@ -95,7 +95,7 @@ const Footer = () => {
 
       </div>
       
-      <div className="absolute right-[-5%] bottom-[-5%] text-[15vw] font-serif font-black text-bg-logo/30 select-none pointer-events-none uppercase tracking-tighter">
+      <div className="hidden sm:block absolute right-[-5%] bottom-[-5%] text-[15vw] font-serif font-black text-bg-logo/30 select-none pointer-events-none uppercase tracking-tighter">
         2010
       </div>
     </footer>

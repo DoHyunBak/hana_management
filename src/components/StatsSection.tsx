@@ -36,7 +36,7 @@ const StatsSection = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-20">
           {stats.map((stat, idx) => (
             <motion.div
               key={idx}

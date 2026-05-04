@@ -85,7 +85,7 @@ const SuccessPortfolio = () => {
           {scrollingPortfolios.map((item, idx) => (
             <div
               key={idx}
-              className="w-[350px] md:w-[500px] shrink-0 relative group rounded-sm overflow-hidden aspect-[4/3] cursor-pointer shadow-2xl"
+              className="w-[280px] sm:w-[350px] md:w-[460px] shrink-0 relative group rounded-sm overflow-hidden aspect-[4/3] cursor-pointer shadow-2xl"
             >
               <img 
                 src={item.image} 
@@ -111,8 +111,8 @@ const SuccessPortfolio = () => {
         </motion.div>
         
         {/* Shadow overlays for depth */}
-        <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-primary-deep to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-primary-deep to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-primary-deep to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-primary-deep to-transparent z-10 pointer-events-none"></div>
       </div>
 
       <div className="mt-24 container mx-auto px-6">

@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
           {scrollingTestimonials.map((item, idx) => (
             <div
               key={idx}
-              className="w-[350px] md:w-[450px] shrink-0 bg-bg-warm p-10 md:p-12 rounded-sm border border-border-warm flex flex-col justify-between relative group hover:bg-white hover:shadow-2xl transition-all duration-500"
+              className="w-[280px] sm:w-[350px] md:w-[420px] shrink-0 bg-bg-warm p-8 md:p-12 rounded-sm border border-border-warm flex flex-col justify-between relative group hover:bg-white hover:shadow-2xl transition-all duration-500"
             >
               <Quote className="text-primary-dark/5 absolute top-8 right-8 group-hover:text-accent/10 transition-colors" size={60} />
               
@@ -105,8 +105,8 @@ const TestimonialsSection = () => {
         </motion.div>
         
         {/* 그라데이션 오버레이 (좌우 끝) */}
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
       </div>
       
       <div className="mt-20 text-center">

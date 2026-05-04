@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden bg-primary-deep pt-20">
+    <section className="relative h-[90vh] min-h-[500px] flex items-center overflow-hidden bg-primary-deep pt-20">
       {/* Background with a sophisticated atmosphere */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -31,8 +31,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl md:text-8xl text-white leading-[1.2] md:leading-[1.1] mb-10 font-extrabold tracking-[-0.05em]"
           >
-            <span className="block whitespace-nowrap">용산의 가치를 지키는</span>
-            <span className="text-secondary-light block whitespace-nowrap">정직한 주택관리의 표본</span>
+            <span className="block">용산의 가치를 지키는</span>
+            <span className="text-secondary-light block">정직한 주택관리의 표본</span>
           </motion.h1>
           
           <motion.p 
@@ -54,7 +54,7 @@ const HeroSection = () => {
           >
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-primary text-white px-12 py-6 text-xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center space-x-4 group border border-white/10 shadow-2xl relative overflow-hidden"
+              className="bg-primary text-white px-6 py-4 md:px-12 md:py-6 text-base md:text-xl font-bold hover:bg-primary-dark transition-all flex items-center justify-center space-x-4 group border border-white/10 shadow-2xl relative overflow-hidden"
             >
               <span className="relative z-10">무료 현장 진단 및 상담 신청</span>
               <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform relative z-10" />
