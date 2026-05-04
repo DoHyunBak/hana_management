@@ -65,17 +65,10 @@ const ServicesSection = () => {
               <h4 className="text-2xl font-bold text-primary-dark mb-6 group-hover:text-accent transition-colors">
                 {service.title}
               </h4>
-              <p className="text-text-sub leading-relaxed text-[17px] font-medium mb-8 flex-grow break-keep">
+              <p className="text-text-sub leading-relaxed text-[17px] font-medium flex-grow break-keep">
                 {service.desc}
               </p>
-              <div className="pt-6 border-t border-border-warm">
-                <button className="flex items-center space-x-2 text-xs font-bold tracking-[0.2em] text-primary uppercase group-hover:text-accent transition-colors">
-                  <span>Explore Service</span>
-                  <ArrowRight size={14} />
-                </button>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>          ))}
           
           {/* Action Card - Reimagined as a formal CTA card */}
           <div className="lg:col-span-1 bg-primary-dark p-12 flex flex-col justify-between border-t-4 border-accent shadow-2xl relative overflow-hidden group">

@@ -34,7 +34,7 @@ const CheckBeforeChoosingSection = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-10">
           <div className="max-w-2xl">
-            <h2 className="text-secondary font-serif text-2xl mb-6">Expert Checklist</h2>
+            <h2 className="text-secondary-light font-serif text-2xl mb-6">Expert Checklist</h2>
             <h3 className="text-4xl md:text-6xl text-white font-bold leading-tight tracking-tighter">
               관리 업체 선정 전, <br />
               <span className="text-white/40 font-normal">꼭 확인해야 할 4가지</span>
@@ -60,7 +60,7 @@ const CheckBeforeChoosingSection = () => {
                  <div className="text-secondary group-hover:text-primary transition-colors mb-8 bg-white/5 p-4 rounded-xl inline-block group-hover:bg-primary/5">
                    {item.icon}
                  </div>
-                 <h4 className="text-sm font-bold text-secondary tracking-[0.2em] uppercase mb-3 opacity-60 group-hover:opacity-100 transition-opacity">{item.title}</h4>
+                 <h4 className="text-sm font-bold text-secondary-light tracking-[0.2em] uppercase mb-3 opacity-90 group-hover:opacity-100 transition-opacity">{item.title}</h4>
                  <h5 className="text-2xl font-bold text-white group-hover:text-slate-900 transition-colors mb-6 break-keep">{item.subtitle}</h5>
                  <p className="text-slate-400 group-hover:text-slate-600 text-lg leading-relaxed font-light break-keep transition-colors">
                    {item.desc}

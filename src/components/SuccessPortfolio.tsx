@@ -48,8 +48,7 @@ const SuccessPortfolio = () => {
       <div className="container mx-auto px-6 mb-24">
         <div className="flex flex-col md:flex-row justify-between items-end gap-12">
           <div className="max-w-2xl">
-            <h2 className="text-secondary font-serif text-2xl mb-6 uppercase tracking-widest">Portfolio</h2>
-            <h3 className="text-4xl md:text-6xl text-white font-extrabold leading-tight tracking-[-0.03em]">
+            <h2 className="text-secondary-light font-serif text-2xl mb-6 uppercase tracking-widest">Portfolio</h2>            <h3 className="text-4xl md:text-6xl text-white font-extrabold leading-tight tracking-[-0.03em]">
               신뢰로 쌓아온 <br />
               <span className="text-white/40 font-normal">용산의 관리 파트너</span>
             </h3>
@@ -97,7 +96,7 @@ const SuccessPortfolio = () => {
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <div className="flex justify-between items-end translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <div>
-                    <span className="text-accent font-bold text-sm mb-3 block uppercase tracking-widest">{item.type}</span>
+                    <span className="text-secondary-soft font-bold text-sm mb-3 block uppercase tracking-[0.2em]">{item.type}</span>
                     <h4 className="text-2xl md:text-3xl font-bold text-white mb-3">{item.title}</h4>
                     <p className="text-white/60 text-sm font-light">{item.management}</p>
                   </div>

@@ -1,83 +1,121 @@
 import { motion } from 'framer-motion';
-import { Shield, Sparkles, Wrench, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { Sparkles, Wrench, MapPin, CheckCircle2, ClipboardCheck } from 'lucide-react';
 
 const ManagementScopeSection = () => {
-  const scopes = [
+  const managementItems = [
     {
-      category: '공용 공간 관리',
-      icon: <Shield size={24} />,
-      items: ['계단 및 복도 청소', '메인 현관 로비 관리', '주차장 전 구역 정리', '분리수거 거점 관리'],
-      desc: '입주민의 첫인상이 결정되는 모든 공용 공간을 쾌적하게 유지합니다.'
+      id: '01',
+      category: '청결 관리',
+      icon: <Sparkles size={28} />,
+      items: [
+        '계단·복도 물청소 및 먼지 제거',
+        '건물 현관 유리창 세정',
+        '분리수거장 주변 정리 및 물청소',
+        '음식물 쓰레기통 세척 및 살균'
+      ],
+      color: 'bg-[#F9F6F2]'
     },
     {
-      category: '위생 및 청결',
-      icon: <Sparkles size={24} />,
-      items: ['정기 바닥 물청소', '유리창 및 창틀 세정', '악취 제거 및 방역', '폐기물 적치 관리'],
-      desc: '보이지 않는 곳의 청결이 건물의 가치를 결정합니다.'
+      id: '02',
+      category: '시설 유지',
+      icon: <Wrench size={28} />,
+      items: [
+        '각 층 전등 및 비상등 작동 확인',
+        '공동 현관 도어락 작동 체크',
+        '옥상 출입문 및 배수구 확인',
+        '우편함 홍보 전단지 수거'
+      ],
+      color: 'bg-white'
     },
     {
-      category: '시설물 점검',
-      icon: <Wrench size={24} />,
-      items: ['공용 조명 상시 점검', '공동 현관 출입문 제어', '배관 및 주요 설비 확인', '노후 시설 보수 보고'],
-      desc: '사전 예방 점검을 통해 대규모 수선 비용 발생을 방지합니다.'
-    },
-    {
-      category: '행정 및 소통',
-      icon: <MessageSquare size={24} />,
-      items: ['입주민 민원 조율', '관리비 고지 지원', '긴급 상황 비상 연락', '건물주 정기 업무 보고'],
-      desc: '건물주와 입주민 사이의 원활한 소통을 지원합니다.'
+      id: '03',
+      category: '주변 환경',
+      icon: <MapPin size={28} />,
+      items: [
+        '건물 외곽 담배꽁초 수거',
+        '주차장 바닥 오염 제거',
+        '담벼락 및 주변 청결 유지',
+        '현장 특이사항 실시간 보고'
+      ],
+      color: 'bg-[#F9F6F2]'
     }
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section id="management-scope" className="py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
-          <div>
-            <h2 className="text-primary font-bold mb-4 flex items-center space-x-2">
-              <span className="w-8 h-[2px] bg-primary"></span>
-              <span>관리 범위</span>
-            </h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
-              전문가에게 맡기면 <br />관리가 쉬워집니다
+        <div className="flex flex-col lg:flex-row justify-between items-start mb-24 gap-12">
+          <div className="max-w-2xl">
+            <h2 className="text-secondary-light font-serif text-2xl mb-6 tracking-widest uppercase">Management Scope</h2>
+            <h3 className="text-4xl md:text-6xl text-primary-dark font-extrabold leading-tight tracking-tighter mb-8">
+              정기 관리 <br />
+              <span className="text-text-sub/40 font-normal italic serif">체크리스트</span>
             </h3>
-          </div>
-          <div className="pt-8 md:pt-12 border-t border-slate-100">
-            <p className="text-lg text-slate-500 leading-relaxed">
-              하나주택종합관리의 관리 범위는 단순한 청소를 넘어 <br />
-              건물 전체의 효율적 운영을 위한 포괄적인 솔루션을 제공합니다.
+            <p className="text-text-sub text-xl font-medium leading-relaxed break-keep max-w-xl">
+              매 방문 시마다 꼼꼼하게 확인하고 보고하는 <br />
+              하나주택종합관리만의 전문 관리 항목입니다.
             </p>
+          </div>
+          <div className="hidden lg:block pt-12">
+            <div className="p-8 border border-border-warm rounded-sm flex items-center space-x-6 bg-bg-warm/30">
+               <div className="w-16 h-16 bg-primary-dark rounded-full flex items-center justify-center text-white">
+                 <ClipboardCheck size={32} />
+               </div>
+               <div>
+                 <p className="text-primary-dark font-bold text-lg">현장 사진과 함께하는</p>
+                 <p className="text-secondary font-serif italic font-bold text-xl uppercase tracking-tighter">Transparent Report</p>
+               </div>
+            </div>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {scopes.map((scope, idx) => (
+        <div className="grid md:grid-cols-3 gap-0 border border-border-warm overflow-hidden rounded-sm">
+          {managementItems.map((group, idx) => (
             <motion.div
-              key={idx}
-              whileHover={{ y: -5 }}
-              className="p-10 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between h-full group hover:bg-white hover:shadow-2xl transition-all duration-300"
+              key={group.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.2, duration: 0.8 }}
+              className={`p-12 md:p-16 border-b md:border-b-0 md:border-r last:border-r-0 border-border-warm ${group.color} group hover:bg-primary-dark transition-colors duration-700`}
             >
-              <div>
-                <div className="flex justify-between items-start mb-10">
-                   <div className="text-secondary p-3 bg-white rounded-lg shadow-sm">
-                     {scope.icon}
-                   </div>
-                   <span className="text-2xl font-serif italic text-slate-200">0{idx + 1}</span>
+              <div className="mb-12 flex justify-between items-start">
+                <div className="text-secondary group-hover:text-secondary-light transition-colors">
+                  {group.icon}
                 </div>
-                <h4 className="text-2xl font-bold text-slate-900 mb-5 group-hover:text-secondary transition-colors">{scope.category}</h4>
-                <p className="text-slate-600 text-lg leading-relaxed mb-10 font-light break-keep">{scope.desc}</p>
+                <span className="text-4xl font-serif italic text-border-warm group-hover:text-white/10 transition-colors leading-none">
+                  {group.id}
+                </span>
               </div>
               
-              <ul className="space-y-4 pt-8 border-t border-slate-200">
-                {scope.items.map((item, i) => (
-                  <li key={i} className="flex items-center space-x-3 text-lg font-medium text-slate-800">
-                    <CheckCircle2 size={18} className="text-secondary shrink-0" />
-                    <span>{item}</span>
+              <h4 className="text-3xl font-bold text-primary-dark mb-10 group-hover:text-white transition-colors">
+                {group.category}
+              </h4>
+              
+              <ul className="space-y-6">
+                {group.items.map((item, i) => (
+                  <li key={i} className="flex items-start space-x-4 group/item">
+                    <CheckCircle2 size={18} className="text-secondary-light mt-1 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
+                    <span className="text-text-main text-[17px] font-medium leading-snug break-keep group-hover:text-white/80 transition-colors">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-border-warm/50">
+          <div className="flex items-center space-x-3 text-secondary-light font-bold">
+            <span className="w-12 h-[1px] bg-secondary-light/30"></span>
+            <p className="text-sm tracking-widest uppercase italic font-serif">
+              "현장 사진과 함께하는 투명한 리포트 제공"
+            </p>
+          </div>
+          <p className="text-text-muted text-sm font-medium">
+            ※ 현장 상황 및 계약 조건에 따라 세부 항목은 유연하게 조정됩니다.
+          </p>
         </div>
       </div>
     </section>
