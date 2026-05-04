@@ -35,9 +35,9 @@ const CheckBeforeChoosingSection = () => {
         <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-10">
           <div className="max-w-2xl">
             <h2 className="text-secondary font-serif text-2xl mb-6">Expert Checklist</h2>
-            <h3 className="text-4xl md:text-6xl text-white font-serif leading-tight tracking-tight">
+            <h3 className="text-4xl md:text-7xl text-white font-bold leading-[1.1] tracking-tighter">
               관리 업체 선정 전, <br />
-              <span className="text-slate-400 font-normal">꼭 확인해야 할 4가지</span>
+              <span className="text-white/40 font-normal">꼭 확인해야 할 4가지</span>
             </h3>
           </div>
           <p className="text-slate-300 text-xl max-w-sm font-light leading-relaxed break-keep">
