@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Phone, MapPin, ClipboardList, Loader2 } from 'lucide-react';
+import { ArrowRight, Phone, MapPin, Loader2 } from 'lucide-react';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
