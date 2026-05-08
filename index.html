@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!--
+      SRI (Subresource Integrity): To harden the Pretendard CDN link, generate a hash and add it:
+        curl -s https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css \
+          | openssl dgst -sha384 -binary | openssl base64 -A
+      Then set: integrity="sha384-<OUTPUT>" on the link below.
+      Google Fonts is excluded — it serves dynamic CSS that varies by user-agent, making SRI impractical.
+    -->
+    <link rel="stylesheet" as="style" crossorigin="anonymous" integrity="sha384-uGEvnSEpW2nM9xJFsrxrwakwrk9QdDTQIBJh0hVMu90OaVyMAMpAK1rIn0/Kh1/k" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap">
     <title>하나주택종합관리 - 정직한 주택관리의 표본</title>
     <meta name="description" content="2010년부터 이어온 용산의 신뢰. 주택, 상가, 빌라의 가치를 높이는 정직하고 체계적인 종합 관리 솔루션을 만나보세요.">
 

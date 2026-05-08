@@ -25,7 +25,7 @@ const ContactSection = () => {
       formRef.current.reset();
       alert('상담 신청이 완료되었습니다. 곧 연락드리겠습니다.');
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      if (import.meta.env.DEV) console.error('EmailJS Error:', error);
       alert('상담 신청 중 오류가 발생했습니다. 전화(070-4227-5394)로 문의주시면 감사하겠습니다.');
     } finally {
       setIsSubmitting(false);
