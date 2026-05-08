@@ -70,22 +70,6 @@ hana/
 
 `.env` 파일을 프로젝트 루트에 생성하세요.
 
-```env
-# EmailJS — 문의 폼 발송
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-
-# 점검 모드 — 'true' 로 설정 시 활성화
-VITE_MAINTENANCE_MODE=false
-
-# 점검 모드 우회 시크릿 (12자 이상 필수)
-VITE_MAINTENANCE_BYPASS_SECRET=your_strong_secret_here
-```
-
-> `VITE_` 접두사가 붙은 변수는 클라이언트 번들에 포함됩니다.  
-> 시크릿은 충분히 복잡하게 설정하고, 소스에 직접 커밋하지 마세요.
-
 ---
 
 ## 시작하기
