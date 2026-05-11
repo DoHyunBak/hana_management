@@ -15,8 +15,21 @@ export default async function handler(
 
   const { user_name, user_phone, building_address, message } = req.body;
 
-  if (!user_name || !user_phone || !message) {
-    return res.status(400).json({ error: 'Missing required fields.' });
+  if (
+    typeof user_name !== 'string' ||
+    typeof user_phone !== 'string' ||
+    typeof message !== 'string'
+  ) {
+    return res.status(400).json({ error: 'Invalid field types.' });
+  }
+
+  if (
+    user_name.trim().length === 0 || user_name.length > 100 ||
+    user_phone.trim().length === 0 || user_phone.length > 20 ||
+    message.trim().length === 0 || message.length > 2000 ||
+    (building_address != null && (typeof building_address !== 'string' || building_address.length > 200))
+  ) {
+    return res.status(400).json({ error: 'Invalid or oversized field values.' });
   }
 
   const SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
@@ -51,8 +64,7 @@ export default async function handler(
     if (response.ok) {
       return res.status(200).json({ success: true, message: 'Email sent successfully.' });
     } else {
-      const errorText = await response.text();
-      console.error('EmailJS Error:', errorText);
+      console.error('EmailJS upstream error:', response.status);
       return res.status(502).json({ error: 'Failed to send email via provider.' });
     }
   } catch (error) {

@@ -1,8 +1,9 @@
+import { createHmac } from 'crypto';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 /**
  * Maintenance Bypass Verification API
- * 
+ *
  * This API replaces the client-side secret verification logic.
  * It ensures that the BYPASS_SECRET never leaves the server environment.
  */
@@ -22,8 +23,11 @@ export default async function handler(
     return res.status(500).json({ error: 'Bypass logic is not properly configured on server.' });
   }
 
-  // Generate the derived token (same logic as before, but on server)
-  const expectedToken = Buffer.from(`hana:bypass:${BYPASS_SECRET}`).toString('base64').slice(0, 20);
+  // HMAC-SHA256 — non-reversible keyed hash; token cannot be used to derive the secret
+  const expectedToken = createHmac('sha256', BYPASS_SECRET)
+    .update('maintenance:bypass:v1')
+    .digest('hex')
+    .slice(0, 32);
 
   // Case 1: Checking a secret (e.g., from ?admin=<secret>)
   if (secret) {
