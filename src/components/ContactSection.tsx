@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone, MapPin, Loader2 } from 'lucide-react';
 import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -14,18 +13,32 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // 환경변수(.env)에 저장된 키를 사용하여 보안성을 높였습니다.
-      await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
-        formRef.current, 
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
+      // 보안을 위해 클라이언트에서 직접 EmailJS를 호출하지 않고, 
+      // 백엔드 API 라우트를 경유하도록 변경했습니다.
+      const formData = new FormData(formRef.current);
+      const payload = {
+        user_name: formData.get('user_name'),
+        user_phone: formData.get('user_phone'),
+        building_address: formData.get('building_address'),
+        message: formData.get('message'),
+      };
+
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
       
       formRef.current.reset();
       alert('상담 신청이 완료되었습니다. 곧 연락드리겠습니다.');
     } catch (error) {
-      if (import.meta.env.DEV) console.error('EmailJS Error:', error);
+      if (import.meta.env.DEV) console.error('Form Error:', error);
       alert('상담 신청 중 오류가 발생했습니다. 전화(070-4227-5394)로 문의주시면 감사하겠습니다.');
     } finally {
       setIsSubmitting(false);

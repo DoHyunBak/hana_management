@@ -52,3 +52,23 @@ bg-primary-deep
 opacity-[0.15] mix-blend-luminosity → 배경 이미지 레이어
 bg-gradient-to-b from-primary-deep/90 to-primary-deep → 그라디언트 오버레이
 ```
+
+---
+
+## 보안 및 환경변수 관리 가이드
+
+이 프로젝트는 보안 강화를 위해 프론트엔드와 백엔드(Vercel Serverless Functions)의 역할을 엄격히 분리합니다.
+
+### 1. 환경변수 구분
+- **`VITE_` 접두사 변수:** 클라이언트 사이드 번들에 포함되며 누구나 브라우저에서 읽을 수 있습니다. 공개 가능한 설정값만 저장하십시오.
+- **접두사가 없는 변수:** `api/` 디렉토리(백엔드)에서만 접근 가능하며, 클라이언트에는 절대로 노출되지 않습니다. 모든 Secret, API Key, Password는 여기에 저장하십시오.
+
+### 2. 백엔드 중계 (Backend Mediation)
+- **Maintenance Bypass:** `BYPASS_SECRET`은 서버에서만 검증하며, 클라이언트에는 해싱/서명된 임시 토큰만 전달합니다.
+- **이메일 발송 (EmailJS):** Service ID, Template ID 등을 보호하기 위해 클라이언트가 직접 외부 API를 호출하지 않고 `/api/send-email`을 통해 중계합니다.
+
+### 3. 로컬 개발 설정
+로컬 환경에서는 `.env` 파일을 생성하여 `.env.example`의 구조를 따르십시오.
+API 라우트(Serverless Functions)를 로컬에서 테스트하려면 `vercel dev` 명령어를 사용하시는 것을 권장합니다.
+Vercel 배포 시에는 Vercel Dashboard의 Environment Variables 설정에 모든 변수를 등록해야 합니다.
+
